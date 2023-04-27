@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-enum Empolyee {
+message Empolyee {
   string name = 1;
   int32 sex = 2;
   string id = 3;
