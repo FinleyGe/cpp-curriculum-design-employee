@@ -8,11 +8,11 @@ private:
 public:
   bool isSaved = false;
   Management();
-  bool save();
-  bool load();
-  bool addEmployee(const Employee &);
-  bool deleteEmployee(const Employee &);
-  bool modifyEmployee(const Employee &);
+  int save();
+  int load();
+  int addEmployee(const Employee &);
+  int deleteEmployee(const Employee &);
+  int modifyEmployee(const Employee &);
   Employee searchEmployeeByID(const string &) const;
   LinkedList<Employee> searchEmployee(const string &) const;
   string statisticsByDepartment() const;

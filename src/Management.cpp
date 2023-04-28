@@ -1,9 +1,11 @@
 #include "Management.hpp"
+#include "./validate.cpp"
+#include "Employee.hpp"
 #include <fstream>
-
+#include <map>
 Management::Management() { load(); }
 
-bool Management::save() {
+int Management::save() {
   std::ofstream fout("data.txt");
   if (!fout.is_open()) {
     return false;
@@ -19,7 +21,7 @@ bool Management::save() {
   return true;
 }
 
-bool Management::load() {
+int Management::load() {
   std::ifstream fin("data.txt");
   if (!fin.is_open()) {
     return false;
@@ -37,19 +39,26 @@ bool Management::load() {
   return true;
 }
 
-bool Management::addEmployee(const Employee &e) {
+int Management::addEmployee(const Employee &e) {
+  auto info = e.getInfo();
+  if (searchEmployeeByID(info.id).getInfo().id == info.id) {
+    return -1;
+  }
+  if (!validate(info)) {
+    return -2;
+  }
   employees.pushBack(e);
   isSaved = false;
-  return true;
+  return 0;
 }
 
-bool Management::deleteEmployee(const Employee &e) {
+int Management::deleteEmployee(const Employee &e) {
   employees.remove(e);
   isSaved = false;
   return true;
 }
 
-bool Management::modifyEmployee(const Employee &e) {
+int Management::modifyEmployee(const Employee &e) {
   auto *p = employees.find(e);
   if (p == nullptr) {
     return false;
@@ -80,4 +89,65 @@ LinkedList<Employee> Management::searchEmployee(const std::string &name) const {
     p = p->next;
   }
   return list;
+}
+
+string Management::statisticsByDepartment() const {
+  string res;
+  std::map<string, std::map<Education, int>> m;
+  auto *p = employees.begin();
+  while (p != employees.end()) {
+    auto info = p->data.getInfo();
+    m[info.department][info.education]++;
+    p = p->next;
+  }
+  for (auto &i : m) {
+    res += i.first + "\n";
+    for (auto &j : i.second) {
+      Education e = j.first;
+      int count = j.second;
+      string education;
+      switch (e) {
+      case BACHELOR:
+        education = "BACHELOR";
+        break;
+      case MASTER:
+        education = "MASTER";
+        break;
+      case DOCTOR:
+        education = "DOCTOR";
+        break;
+      }
+      res += education + ": " + std::to_string(count) + "\n";
+    }
+  }
+  return res;
+}
+
+string Management::statisticsByEducation() const {
+  std::map<Education, int> m;
+  auto *p = employees.begin();
+  while (p != employees.end()) {
+    auto info = p->data.getInfo();
+    m[info.education]++;
+    p = p->next;
+  }
+  string res;
+  for (auto &i : m) {
+    Education e = i.first;
+    int count = i.second;
+    string education;
+    switch (e) {
+    case BACHELOR:
+      education = "BACHELOR";
+      break;
+    case MASTER:
+      education = "MASTER";
+      break;
+    case DOCTOR:
+      education = "DOCTOR";
+      break;
+    }
+    res += education + ": " + std::to_string(count) + "\n";
+  }
+  return res;
 }

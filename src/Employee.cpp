@@ -1,10 +1,25 @@
 #include "Employee.hpp"
+#include <sstream>
+
+using std::ostream;
 
 Employee::Employee() {}
 
-Employee::Employee(const EmployeeInfo &info) : info(info) {}
+Employee::Employee(const EmployeeInfo info) : info(info) {}
 
 Employee::Employee(const Employee &e) : info(e.info) {}
+
+Employee::Employee(const string &s) {
+  std::stringstream ss(s);
+  ss >> info.name;
+  ss >> info.id;
+  ss >> info.phone;
+  ss >> info.college;
+  ss >> info.department;
+  int education;
+  ss >> education;
+  info.education = (Education)education;
+}
 
 EmployeeInfo Employee::getInfo() const { return info; }
 
@@ -29,4 +44,34 @@ std::string Employee::toString() const {
     break;
   }
   return res;
+}
+string EmployeeInfo::format() const {
+
+  string res;
+  res += "Name: " + name + "\n";
+  res += "ID: " + id + "\n";
+  res += "Phone: " + phone + "\n";
+  res += "College: " + college + "\n";
+  res += "Department: " + department + "\n";
+  switch (education) {
+  case BACHELOR:
+    res += "Education: BACHELOR\n";
+    break;
+  case MASTER:
+    res += "Education: MASTER\n";
+    break;
+  case DOCTOR:
+    res += "Education: DOCTOR\n";
+    break;
+  }
+  return res;
+}
+
+ostream &operator<<(ostream &os, const EmployeeInfo &e) {
+  os << e.format();
+  return os;
+}
+
+bool Employee::operator==(const Employee &e) const {
+  return info.id == e.info.id;
 }

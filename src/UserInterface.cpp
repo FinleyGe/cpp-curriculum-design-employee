@@ -1,5 +1,6 @@
 #include "Management.hpp"
 #include <iostream>
+#include <string>
 using std::cin;
 using std::cout;
 using std::string;
@@ -7,11 +8,13 @@ void mainMenu();
 void manageMenu();
 void searchMenu();
 int getChoice();
+void printMainMenu();
 
 Management m;
 
-void mainMenu() {
-  string menu = "Welcome to Employee Management System\n"
+void printMainMenu() {
+  string menu = "===================\n"
+                "Welcome to Employee Management System\n"
                 "Type the number of each item after '>'\n"
                 "1. Manage Menu\n"
                 "2. Search Menu\n"
@@ -19,7 +22,11 @@ void mainMenu() {
                 "4. Exit\n"
                 "";
   cout << menu;
+}
+
+void mainMenu() {
   while (true) {
+    printMainMenu();
     int choice = getChoice();
     switch (choice) {
     case 1:
@@ -30,6 +37,7 @@ void mainMenu() {
       break;
     case 3:
       m.save();
+      break;
     case 4:
       if (!m.isSaved) {
         cout << "You have unsaved changes, save before exit? (y/n)\n";
@@ -58,7 +66,6 @@ void manageMenu() {
   int choice = getChoice();
   switch (choice) {
   case 1: {
-    string id, name, phone, department, college;
     EmployeeInfo e;
     cout << "ID: ";
     cin >> e.id;
@@ -73,9 +80,21 @@ void manageMenu() {
     cout << "Education: 0 for bachelor, 1 for master, 2 for doctor\n";
     int education;
     cin >> education;
-    Education ed = (Education)education;
-    e.education = ed;
-    m.addEmployee(Employee(e));
+    e.education = (Education)education;
+    Employee em;
+    em.setInfo(e);
+    auto res = m.addEmployee(em);
+    switch (res) {
+    case 0:
+      cout << "Success\n";
+      break;
+    case -1:
+      cout << "Employee already exists\n";
+      break;
+    case -2:
+      cout << "Invalid input\n";
+      break;
+    }
     break;
   }
   case 2: {
@@ -117,8 +136,10 @@ void manageMenu() {
     e.setInfo(info);
     break;
   }
-  case 4:
+  case 4: {
+    printMainMenu();
     return;
+  }
   default:
     cout << "Invalid choice\n";
   }
@@ -134,7 +155,58 @@ void searchMenu() {
       "4. Statistics number of employees each educational background\n"
       "5. Back\n"
       "";
+  cout << menu;
+  int choice = getChoice();
+  switch (choice) {
+  case 1: {
+    string id;
+    cout << "ID: ";
+    cin >> id;
+    auto e = m.searchEmployeeByID(id);
+    if (e.getInfo().id == "") {
+      cout << "Employee not found\n";
+      break;
+    }
+    cout << "Employee found\n";
+    cout << e.getInfo() << "\n";
+    break;
+  }
+
+  case 2: {
+    string keyword;
+    cout << "Keyword: ";
+    cin >> keyword;
+    auto e = m.searchEmployee(keyword);
+    if (e.getSize() == 0) {
+      cout << "Employee not found\n";
+      break;
+    }
+
+    auto start = e.begin();
+    auto end = e.end();
+
+    while (start != end) {
+      cout << start << "\n";
+      start = start->next;
+    }
+
+    break;
+  }
+  case 3: {
+    cout << m.statisticsByDepartment() << "\n";
+  }
+  case 4: {
+    cout << m.statisticsByEducation() << "\n";
+  }
+  case 5: {
+    printMainMenu();
+    return;
+  }
+  default:
+    cout << "Invalid choice\n";
+  }
 }
+
 int getChoice() {
   int choice;
   cout << ">";

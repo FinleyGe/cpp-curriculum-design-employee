@@ -6,9 +6,10 @@ public:
     T data;
     Node *next;
     Node *prev;
+    Node() : next(nullptr), prev(nullptr){}; // default constructor
     Node(T data) : data(data), next(nullptr), prev(nullptr){};
   };
-  LinkedList() : head(nullptr), tail(nullptr), size(0){};
+  LinkedList();
   LinkedList(const LinkedList &);
   LinkedList &operator=(const LinkedList &);
   ~LinkedList();
@@ -20,8 +21,7 @@ public:
   int getSize() const;
 
 private:
-  Node *head; // the head of the linked list.
-  Node *tail; // the tail.
-              // both of them are always empty.
-  int size;   // the size of the linked list.
+  Node *head = new Node(); // the head of the linked list.
+  Node *tail = new Node(); // the tail of the linked list.
+  int size = 0;            // the size of the linked list.
 };
