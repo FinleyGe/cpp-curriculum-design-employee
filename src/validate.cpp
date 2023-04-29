@@ -1,7 +1,4 @@
-#pragma once
-#include "Employee.hpp"
-#include <string>
-using std::string;
+#include "validate.hpp"
 bool isNameValid(const string &s) { return s.length() > 0; }
 bool isIDValid(const string &s) {
   if (s.length() != 8) {

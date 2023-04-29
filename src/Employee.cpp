@@ -1,5 +1,4 @@
 #include "Employee.hpp"
-#include <sstream>
 
 using std::ostream;
 

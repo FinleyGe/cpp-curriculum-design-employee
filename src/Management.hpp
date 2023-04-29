@@ -1,5 +1,10 @@
-#include "../lib/LinkedList.hpp"
-#include "Employee.hpp"
+#pragma once
+#include "lib/LinkedList.hpp"
+#include "src/Employee.hpp"
+#include "src/validate.hpp"
+#include <fstream>
+#include <map>
+#include <sstream>
 
 class Management {
 private:

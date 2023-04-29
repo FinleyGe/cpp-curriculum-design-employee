@@ -1,8 +1,4 @@
 #include "Management.hpp"
-#include "./validate.cpp"
-#include "Employee.hpp"
-#include <fstream>
-#include <map>
 Management::Management() { load(); }
 
 int Management::save() {
