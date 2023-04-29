@@ -101,8 +101,12 @@ void manageMenu() {
     string id;
     cout << "ID: ";
     cin >> id;
-    Employee e(id);
-    m.deleteEmployee(e);
+    auto res = m.deleteEmployee(id);
+    if (res == 0) {
+      cout << "Success\n";
+    } else {
+      cout << "Employee not found\n";
+    }
     break;
   }
   case 3: {
@@ -184,9 +188,9 @@ void searchMenu() {
 
     auto start = e.begin();
     auto end = e.end();
-
+    cout << "Employee found " << e.getSize() << " results\n";
     while (start != end) {
-      cout << start << "\n";
+      cout << start->data.getInfo() << "\n";
       start = start->next;
     }
 
@@ -194,9 +198,11 @@ void searchMenu() {
   }
   case 3: {
     cout << m.statisticsByDepartment() << "\n";
+    break;
   }
   case 4: {
     cout << m.statisticsByEducation() << "\n";
+    break;
   }
   case 5: {
     printMainMenu();

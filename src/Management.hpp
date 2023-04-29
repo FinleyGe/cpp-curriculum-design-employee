@@ -11,7 +11,7 @@ public:
   int save();
   int load();
   int addEmployee(const Employee &);
-  int deleteEmployee(const Employee &);
+  int deleteEmployee(const string &);
   int modifyEmployee(const Employee &);
   Employee searchEmployeeByID(const string &) const;
   LinkedList<Employee> searchEmployee(const string &) const;

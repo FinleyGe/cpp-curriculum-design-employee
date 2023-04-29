@@ -52,20 +52,33 @@ int Management::addEmployee(const Employee &e) {
   return 0;
 }
 
-int Management::deleteEmployee(const Employee &e) {
-  employees.remove(e);
+int Management::deleteEmployee(const string &id) {
+  auto *p = employees.begin();
+  while (p != employees.end()) {
+    if (p->data.getInfo().id == id) {
+      break;
+    }
+    p = p->next;
+  }
+  if (p == nullptr) {
+    return -1;
+  }
+  employees.remove(p->data);
   isSaved = false;
-  return true;
+  return 0;
 }
 
 int Management::modifyEmployee(const Employee &e) {
   auto *p = employees.find(e);
   if (p == nullptr) {
-    return false;
+    return -1;
+  }
+  if (!validate(e.getInfo())) {
+    return -2;
   }
   p->data = e;
   isSaved = false;
-  return true;
+  return 0;
 }
 
 Employee Management::searchEmployeeByID(const std::string &id) const {
@@ -79,11 +92,16 @@ Employee Management::searchEmployeeByID(const std::string &id) const {
   return Employee();
 }
 
-LinkedList<Employee> Management::searchEmployee(const std::string &name) const {
+LinkedList<Employee>
+Management::searchEmployee(const std::string &keyword) const {
   LinkedList<Employee> list;
   auto *p = employees.begin();
   while (p != employees.end()) {
-    if (p->data.getInfo().name == name) {
+    auto info = p->data.getInfo();
+    if (info.id.find(keyword) != std::string::npos ||
+        info.name.find(keyword) != std::string::npos ||
+        info.department.find(keyword) != std::string::npos ||
+        info.college.find(keyword) != std::string::npos) {
       list.pushBack(p->data);
     }
     p = p->next;
@@ -101,7 +119,7 @@ string Management::statisticsByDepartment() const {
     p = p->next;
   }
   for (auto &i : m) {
-    res += i.first + "\n";
+    res += "department: " + i.first + "\n";
     for (auto &j : i.second) {
       Education e = j.first;
       int count = j.second;

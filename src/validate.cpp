@@ -26,29 +26,9 @@ bool isPhoneValid(const string &s) {
   return true;
 }
 
-bool isDepartmentValid(const string &s) {
-  if (s.length() == 0) {
-    return false;
-  }
-  for (int i = 0; i < s.length(); i++) {
-    if (s[i] < 'A' || s[i] > 'Z') {
-      return false;
-    }
-  }
-  return true;
-}
+bool isDepartmentValid(const string &s) { return s.length() > 0; }
 
-bool isCollegeValid(const string &s) {
-  if (s.length() == 0) {
-    return false;
-  }
-  for (int i = 0; i < s.length(); i++) {
-    if (s[i] < 'A' || s[i] > 'Z') {
-      return false;
-    }
-  }
-  return true;
-}
+bool isCollegeValid(const string &s) { return s.length() > 0; }
 
 bool validate(const EmployeeInfo &info) {
   return isNameValid(info.name) && isIDValid(info.id) &&
