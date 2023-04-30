@@ -35,14 +35,15 @@ cc_binary (
   ],
 )
 
-# cc_binary (
-#   name = "employee-management-server",
-#   srcs = ["server.cpp"],
-#   deps = [
-#     "//src:validate",
-#     "//src:management",
-#     "//lib:linked-list",
-#     "//api:api",
-#     "@com_github_grpc_grpc//:grpc++",
-#   ],
-# )
+cc_binary (
+  name = "server",
+  srcs = ["server.cpp"],
+  deps = [
+    "//src:validate",
+    "//src:management",
+    "//lib:linked-list",
+    "//api:api",
+    "@com_github_grpc_grpc//:grpc++",
+    "@com_github_grpc_grpc//:grpc++_reflection",
+  ],
+)

@@ -18,15 +18,13 @@ hedron_compile_commands_setup()
 
 http_archive(
     name = "com_github_grpc_grpc",
-    strip_prefix = "grpc-1.45.0",
-    sha256 = "ec19657a677d49af59aa806ec299c070c882986c9fcc022b1c22c2a3caf01bcd",
-    urls = ["https://github.com/grpc/grpc/archive/refs/tags/v1.45.0.tar.gz"],
+    urls = [
+        "https://github.com/grpc/grpc/archive/51a1f3ca034a30749ae9271d330f39af5fa4261a.tar.gz",
+    ],
+    strip_prefix = "grpc-51a1f3ca034a30749ae9271d330f39af5fa4261a",
 )
- 
+
 load("@com_github_grpc_grpc//bazel:grpc_deps.bzl", "grpc_deps")
- 
 grpc_deps()
- 
 load("@com_github_grpc_grpc//bazel:grpc_extra_deps.bzl", "grpc_extra_deps")
- 
 grpc_extra_deps()
