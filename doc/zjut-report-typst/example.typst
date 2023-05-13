@@ -7,7 +7,7 @@
   class: "计科 2103",
   grade: "2021",
   department: "计算机科学与技术学院",
-  date: (2023, 05, 09),
+  date: (2023, 5, 14),
   id: "202105130406"
 )
 
@@ -47,10 +47,10 @@
 - 版本控制: Git 2.40.1
 - 构建工具: Bazel 6.2
 - 其他:
-  - C++ 标准: C++14
+  - C++ 标准: C++ 14
   - libprotoc: 3.21.12
   - flutter: 3.7.12
-
+  - 本文由 typst 编写生成
 = 实验课题分析
 
 本题要求实现一个教职工信息管理系统，要求底层的数据结构一定要是链表。
@@ -95,7 +95,7 @@
 ```,
 
 caption: "链表头文件引用关系",
-)<code:linkedlist>
+) <code:linkedlist>
 
 接下来我将说明链表的实现。
 
@@ -210,13 +210,331 @@ caption: "查找方法的实现"
 查找方法的实现则需要遍历整个链表，直到找到目标节点或者遍历到尾节点。
 因此查找的时间复杂度为$O(n)$，在后续的实验中，需要注意尽量减少查找的次数。
 
-剩下的三个方法略去。
+剩下的两个方法`begin`和`end`则是对链表一些节点的直接返回，此处不再赘述。
 
 == 教职工类
 
-教职工类的定义在`src/Employee.hpp`中。
+=== 教职工类的定义
 
-教职工类定义了教职工的各种基本信息
+教职工类的定义在`src/Employee.hpp`中定义了教职工的各种基本信息
+
+#code(
+```cpp
+enum Education { BACHELOR = 0, MASTER = 1, DOCTOR = 2 };
+
+struct EmployeeInfo {
+  string name;
+  int sex;
+  string id;
+  string phone;
+  string college;
+  string department;
+  Education education;
+  string format() const;
+  friend ostream &operator<<(ostream &os, const EmployeeInfo &e);
+};
+
+class Employee {
+private:
+  EmployeeInfo info;
+
+public:
+  Employee();
+  Employee(const EmployeeInfo);
+  Employee(const Employee &);
+  Employee(const string &);
+  EmployeeInfo getInfo() const;
+  void setInfo(const EmployeeInfo &);
+  string toString() const;
+  bool operator==(const Employee &e) const;
+};
+```,
+caption: "教职工类的定义"
+) <code:Employee>
+
+教职工类的定义如@code:Employee 所示。
+
+其中 `EmployeeInfo` 是一个结构体，用于存储教职工的信息。
+也可以方便参数的传递、返回。
+
+`Employee` 类则是对 `EmployeeInfo` 的封装，提供了一些基本的操作。
+
+`EmployeeInfo` 中的`format`方法将教职工格式化为一个字符串，
+方便进行输出。对`<<`的重载则是将这个字符串输出到流中。
+
+而`Employee` 中的`toString` 方法则是将教职工的信息转化为
+便于存储的字符串，用于写入到文件中。常引用`string`为参数的构造函数
+的作用则是将用于存储的字符串转换为`Employee`对象。
+
+`Education` 是一个枚举类型，其中
+
+- `BACHELOR = 0` 表示本科
+- `MASTER = 1` 表示硕士
+- `DOCTOR = 2` 表示博士
+
+=== 教职工类的实现
+
+本节主要介绍教职工类中，用于转储的函数和用于输出的函数的实现。
+
+#code(
+```cpp
+string EmployeeInfo::format() const {
+
+  string res;
+  res += "Name: " + name + "\n";
+  res += "ID: " + id + "\n";
+  res += "Phone: " + phone + "\n";
+  res += "College: " + college + "\n";
+  res += "Department: " + department + "\n";
+  switch (education) {
+  case BACHELOR:
+    res += "Education: BACHELOR\n";
+    break;
+  case MASTER:
+    res += "Education: MASTER\n";
+    break;
+  case DOCTOR:
+    res += "Education: DOCTOR\n";
+    break;
+  }
+  return res;
+}
+
+ostream &operator<<(ostream &os, const EmployeeInfo &e) {
+  os << e.format();
+  return os;
+}
+```,
+caption: "format函数的实现"
+) <code:employee-format>
+
+@code:employee-format 是`EmployeeInfo`中`format`函数的实现。
+该函数将教职工的信息格式化为一个字符串，方便进行输出。
+
+而`<<`的重载则是将这个字符串输出到流中。
+
+#code(
+```cpp
+Employee::Employee(const string &s) {
+  std::stringstream ss(s);
+  ss >> info.name;
+  ss >> info.id;
+  ss >> info.phone;
+  ss >> info.college;
+  ss >> info.department;
+  string education;
+  ss >> education;
+  if (education == "BACHELOR")
+    info.education = BACHELOR;
+  else if (education == "MASTER")
+    info.education = MASTER;
+  else
+    info.education = DOCTOR;
+}
+```,
+caption: "常引用string为参数的构造函数的实现"
+) <code:employee-const-string>
+
+@code:employee-const-string 是常引用`string`为参数的构造函数的实现。
+调用该构造函数时，需要传入一个用于存储的字符串，该函数将字符串转换为
+`Employee`对象。
+
+#code(
+```cpp
+std::string Employee::toString() const {
+  string res;
+  res += info.name + " ";
+  res += info.id + " ";
+  res += info.phone + " ";
+  res += info.college + " ";
+  res += info.department + " ";
+  switch (info.education) {
+  case BACHELOR:
+    res += "BACHELOR";
+    break;
+  case MASTER:
+    res += "MASTER";
+    break;
+  case DOCTOR:
+    res += "DOCTOR";
+    break;
+  }
+  return res;
+}
+```,
+caption: "toString函数的实现"
+) <code:employee-tostring>
+
+@code:employee-tostring 是`Employee`中`toString`函数的实现。
+该函数将教职工的信息转化为便于存储的字符串，用于写入到文件中。
+
+== 管理类
+
+`Management`类是相当于 MVC 加工中 `Controller` 的角色。
+定于与 `src/Management.hpp` 中。
+主要功能是编写业务逻辑和接口。
+
+=== 管理类的定义
+
+#code(
+```cpp
+class Management {
+private:
+  LinkedList<Employee> employees;
+
+public:
+  bool isSaved = false;
+  Management();
+  ~Management();
+  int save();
+  int load();
+  int addEmployee(const Employee &);
+  int deleteEmployee(const string &);
+  int modifyEmployee(const Employee &);
+  Employee searchEmployeeByID(const string &) const;
+  LinkedList<Employee> searchEmployee(const string &) const;
+  string statisticsByDepartment() const;
+  std::map<std::string, std::map<Education, int>>
+  statisticsByDepartmentMap() const;
+  string statisticsByEducation() const;
+  std::map<Education, int> statisticsByEducationMap() const;
+};
+```,
+caption: "管理类的定义"
+) <code:Management>
+
+`Management`类的定义如@code:Management 所示。
+- `save` 方法用于将教职工信息保存到文件中。
+- `load` 方法用于从文件中读取教职工信息。
+- `addEmployee` 方法用于添加教职工。
+- `deleteEmployee` 方法用于删除教职工。
+- `modifyEmployee` 方法用于修改教职工信息。
+- `searchEmployeeByID` 方法用于根据教职工的 ID 查找教职工。
+- `searchEmployee` 方法用于根据关键字查找教职工。
+- `statisticsByDepartment` 方法用于统计各个学院的教职工学历。
+- `statisticsByDepartmentMap` 方法用于统计各个学院的教职工学历，返回一个
+  `map` 对象。
+- `statisticsByEducation` 方法用于统计各个学历的教职工人数。
+- `statisticsByEducationMap` 方法用于统计各个学历的教职工人数，返回一个
+  `map` 对象。
+
+=== 保存和读取的实现
+
+#code(
+```cpp
+const string path = "/home/finley/data.txt"; // TODO: change the path
+int Management::save() {
+  std::ofstream fout(path);
+  if (!fout.is_open()) {
+    return false;
+  }
+  auto *p = employees.begin();
+  while (p != employees.end()) {
+    fout << p->data.toString() << '\n';
+    p = p->next;
+  }
+
+  fout.close();
+  isSaved = true;
+  return true;
+}
+
+int Management::load() {
+  std::ifstream fin(path);
+  if (!fin.is_open()) {
+    return false;
+  }
+  while (!fin.eof()) {
+    std::string line;
+    std::getline(fin, line);
+    if (line.empty()) {
+      continue;
+    }
+    Employee e(line);
+    employees.pushBack(e);
+  }
+  fin.close();
+  return true;
+}
+```,
+caption: "保存和读取的实现"
+) <code:Management-save-load>
+
+@code:Management-save-load 是`Management`类中`save`和`load`方法的实现。
+`save`方法将教职工信息保存到文件中，`load`方法从文件中读取教职工信息。
+
+需要注意，`path`变量是保存文件的路径，需要根据实际情况修改。
+
+=== 数据合法性检测
+
+#code(
+```cpp
+#include "validate.hpp"
+bool isNameValid(const string &s) { return s.length() > 0; }
+bool isIDValid(const string &s) {
+  if (s.length() != 8) {
+    return false;
+  }
+  for (int i = 0; i < 8; i++) {
+    if (s[i] < '0' || s[i] > '9') {
+      return false;
+    }
+  }
+  return true;
+}
+bool isPhoneValid(const string &s) {
+  if (s.length() != 11) {
+    return false;
+  }
+  for (int i = 0; i < 11; i++) {
+    if (s[i] < '0' || s[i] > '9') {
+      return false;
+    }
+  }
+  return true;
+}
+
+bool isDepartmentValid(const string &s) { return s.length() > 0; }
+
+bool isCollegeValid(const string &s) { return s.length() > 0; }
+
+bool validate(const EmployeeInfo &info) {
+  return isNameValid(info.name) && isIDValid(info.id) &&
+         isPhoneValid(info.phone) && isDepartmentValid(info.department) &&
+         isCollegeValid(info.college);
+}
+```,
+caption: "数据合法性检测"
+) <code:validate>
+
+@code:validate 是数据合法性检测的实现。
+可以对教职工的姓名、ID、电话、学院、学历进行合法性检测。
+
+== 操作界面
+
+命令行界面在`UserInterface.cpp`中实现。
+实现代码详见附录。
+为了实现GUI，我引入了 `grpc`
+
+=== GRPC
+
+GRPC，(Google Remote Procession Call)，是谷歌开发的一套开源的远程过程调用框架。
+它使用
+Protocol Buffers 
+作为接口描述语言（IDL），
+支持多种语言，包括 C++、Java、Python、Go、Ruby、C\# 等。
+
+使用 GRPC，可以方便地生成后端服务器和前端客户端交互的代码。
+
+后端服务器的代码定义于`server.cpp`，默认监听`50051`端口。
+
+=== Flutter
+
+Flutter 是谷歌开发的一套跨平台的移动应用开发框架。
+它使用 Dart 语言作为开发语言，
+支持 Android、iOS、Web、Windows、MacOS、Linux 等多个平台。
+
+本项目的前端代码定义于`employee`目录下。
 
 = 实验调试和运行
 
@@ -226,6 +544,226 @@ caption: "查找方法的实现"
 
 笔者使用的是 `Arch Linux`，可以直接使用 `yay -S bazel` 安装。
 
+GUI界面使用flutter实现，需要安装配置flutter。
+
+== 命令行模式
+
+执行编译命令
+```sh
+bazel build //src:main
+```
+等待编译完成后，
+执行
+```sh
+bazel run //src:main
+```
+进入命令行模式，如果正常进行，则会显示@img:cli-start 所示的界面。
+
+#img(
+  image("../img/cli-start.png"),
+  caption: "进入命令行模式"
+) <img:cli-start>
+
+键入`1`则进入管理菜单，如图@img:cli-management 所示。
+#img(
+  image("../img/cli-management.png"),
+  caption: "管理菜单"
+) <img:cli-management>
+
+再键入`1`则可以添加教职工
+#img(
+  image("../img/cli-add.png"),
+  caption: "添加教职工"
+) <img:cli-add>
+
+键入`3` 则保存当前教职工信息到文件中。
+
+#img(
+  image("../img/cli-save.png"),
+  caption: "保存教职工信息"
+) <img:cli-save>
+
+@img:cli-save 为保存输出的文件。
+
+接下来测试读取文件。先键入`4`退出程序
+
+重新运行后，测试查询功能。键入`2`进入查询菜单。
+
+再键入`1` 通过ID查询教职工信息。
+#img(
+  image("../img/cli-search.png"),
+  caption: "查询教职工信息"
+) <img:cli-query>
+
+接下来测试修改功能。键入`1`进入管理菜单。
+然后`3`进入修改菜单。
+
+#img(
+  image("../img/cli-modify.png"),
+  caption: "修改教职工信息"
+) <img:cli-modify>
+
+修改后，保存，查看文件。
+
+#img(
+  image("../img/cli-after-modified.png"),
+  caption: "修改后文件信息"
+) <img:cli-modify-save>
+
+测试删除功能。键入`1`进入管理菜单。
+然后`2`进入删除菜单。
+输入ID，删除教职工信息。
+
+#img(
+  image("../img/cli-delete.png"),
+  caption: "删除教职工信息"
+) <img:cli-delete>
+
+再次查看文件，可以看到教职工信息已经被删除。
+
+#img(
+  image("../img/cli-after-deleted.png"),
+  caption: "删除后文件信息"
+) <img:cli-delete-save>
+
+为了测试统计功能，先添加一些随机数据。
+我写了一个python脚本用于生成随机数。
+
+#code(
+  ```python
+  #!/bin/env python3
+import random
+used_id = set()
+
+def generate_test_data() -> str:
+    # random data
+    name:str = "name" + str(random.randint(10000000, 100000000))
+    id:str = str(random.randint(10000000, 100000000))
+    while id in used_id:
+        id = str(random.randint(10000000, 100000000))
+    used_id.add(id)
+
+    phone:str = "1" + str(random.randint(1000000000, 10000000000))
+    department:str = random.choice(("CS", "EE", "Math"))
+    college:str = random.choice(("CS", "EE", "Math"))
+    edu:str = random.choice(("MASTER", "BACHELOR", "DOCTOR"))
+
+    data = "{0} {1} {2} {3} {4} {5}".format(name, id, phone, department, college, edu)
+    return data
+
+def main():
+    for i in range(20):
+        print(generate_test_data())
+
+if __name__ == "__main__":
+    main()
+
+  ```,
+  caption: "生成随机数据脚本"
+) <code:generate_test_data>
+
+#img(
+  image("../img/cli-test-data.png"),
+  caption: "随机数据"
+) <img:cli-test-data>
+
+测试统计功能。
+
+#img(
+  image("../img/cli-stat-1.png"),
+  caption: "统计功能: 各专业不同学历人数"
+) <img:cli-statistics>
+
+#img(
+  image("../img/cli-stat-2.png"),
+  caption: "统计功能: 全体不同学历人数"
+) <img:cli-statistics-2>
+
+测试数据合法性检查。
+
+#img(
+  image("../img/cli-validate.png"),
+  caption: "数据合法性检查"
+) <img:cli-check>
+
+== GUI
+
+编译后端服务器
+
+```sh
+bazel build //src:server
+```
+
+运行后端服务器
+
+```sh
+bazel run //src:server
+```
+
+进入前端目录`empolyee`
+编译运行前端。
+
+```sh
+flutter run
+```
+
+#img(
+  image("../img/gui-start.png"),
+  caption: "启动前端"
+) <img:gui-start>
+
+#img(
+  image("../img/gui-add.png"),
+  caption: "添加教职工"
+) <img:gui-add>
+
+#img(
+  image("../img/gui-delete.png"),
+  caption: "删除教职工"
+) <img:gui-delete>
+
+#img(
+  image("../img/gui-modify.png"),
+  caption: "修改教职工"
+) <img:gui-modify>
+
+#img(
+  image("../img/gui-search.png"),
+  caption: "查询教职工"
+) <img:gui-search>
+
+#img(
+  image("../img/gui-search-result.png"),
+  caption: "查询结果"
+) <img:gui-search-result>
+
+#img(
+  image("../img/gui-stat-1.png"),
+  caption: "统计功能: 各专业不同学历人数"
+) <img:gui-stat-1>
+
+#img(
+  image("../img/gui-stat-2.png"),
+  caption: "统计功能: 全体不同学历人数"
+) <img:gui-stat-2>
 
 = 实验总结
 
+这次实验我学习了链表的设计和实现，
+学习了C++的基本语法和面向对象的编程思想，
+学习了C++的文件操作。
+
+学习到了grpc、bazel、flutter等新技术。
+
+在实验中我遇到了很多问题，比如：
+多次遇到了空指针的问题，后来使用了哑元节点加以解决。
+
+在引入 grpc 的时候，决定使用 grpc 开发官方推荐的构建工具
+bazel 来构建 c++ 项目。但是在研究的过程中遇到了很多问题
+我在 stackoverflow，github issue 等处找寻答案，最终得以完成实验。
+
+引入 flutter 的时候，我遇到了很多问题，比如：
+flutter 的权限问题，需要手动修改当前用户组。
+
+在实验中我学习到了很多新技术，也遇到了很多问题，
+通过自己的努力，最终完成了实验。
