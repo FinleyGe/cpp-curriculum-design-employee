@@ -1,6 +1,74 @@
 syntax = "proto3";
 package api;
+message Employee {
+  string name = 1;
+  string id = 2;
+  string phone = 3;
+  string college = 4;
+  string department = 5;
+  int32 education = 6;
+}
+
+message DepartmentStatistic {
+  string department = 1;
+  int32 bachelor = 2;
+  int32 master = 3;
+  int32 doctor = 4;
+}
+
+message EducationStatistic {
+  int32 bachelor = 1;
+  int32 master = 2;
+  int32 doctor = 3;
+}
+
+message EmployeeList { repeated Employee empolyee = 1; }
+
+message AddEmployeeRequest { Employee empolyee = 1; }
+
+message AddEmployeeResponse { int32 res = 1; }
+
+message DeleteEmployeeRequest { string id = 1; }
+
+message DeleteEmployeeResponse { int32 res = 1; }
+
+message UpdateEmployeeRequest { Employee empolyee = 1; }
+
+message UpdateEmployeeResponse { int32 res = 1; }
+
+message GetEmployeeRequest { string id = 1; }
+
+message GetEmployeeResponse { Employee empolyee = 1; }
+
+message GetEmployeeByKeywordRequest { string keyword = 1; }
+
+message GetEmployeeByKeywordResponse { EmployeeList empolyeeList = 1; }
+
+message StatisticByDepartmentRequest {}
+
+message StatisticByDepartmentResponse {
+  repeated DepartmentStatistic departmentStatistic = 1;
+}
+
+message StatisticByEducationRequest {}
+
+message StatisticByEducationResponse {
+  EducationStatistic educationStatistic = 1;
+}
+
 message TestRequest { string request = 1; }
 message TestResponse { string response = 1; }
 
-service EmployeeService { rpc Test(TestRequest) returns (TestResponse); }
+service EmployeeService {
+  rpc AddEmployee(AddEmployeeRequest) returns (AddEmployeeResponse);
+  rpc DeleteEmployee(DeleteEmployeeRequest) returns (DeleteEmployeeResponse);
+  rpc UpdateEmployee(UpdateEmployeeRequest) returns (UpdateEmployeeResponse);
+  rpc GetEmployee(GetEmployeeRequest) returns (GetEmployeeResponse);
+  rpc GetEmployeeByKeyword(GetEmployeeByKeywordRequest)
+      returns (GetEmployeeByKeywordResponse);
+  rpc StatisticByDepartment(StatisticByDepartmentRequest)
+      returns (StatisticByDepartmentResponse);
+  rpc StatisticByEducation(StatisticByEducationRequest)
+      returns (StatisticByEducationResponse);
+  rpc Test(TestRequest) returns (TestResponse);
+}

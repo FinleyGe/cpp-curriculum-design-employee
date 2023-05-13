@@ -13,6 +13,7 @@ private:
 public:
   bool isSaved = false;
   Management();
+  ~Management();
   int save();
   int load();
   int addEmployee(const Employee &);
@@ -21,5 +22,8 @@ public:
   Employee searchEmployeeByID(const string &) const;
   LinkedList<Employee> searchEmployee(const string &) const;
   string statisticsByDepartment() const;
+  std::map<std::string, std::map<Education, int>>
+  statisticsByDepartmentMap() const;
   string statisticsByEducation() const;
+  std::map<Education, int> statisticsByEducationMap() const;
 };

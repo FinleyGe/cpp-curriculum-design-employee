@@ -1,0 +1,276 @@
+// TODO: set the font of yourselves
+#let songti = "Noto Serif CJK SC"
+#let heiti = "Noto Sans CJK SC"
+
+set page(
+  paper: "a4",
+)
+
+#let _label(content) = text(content, size: 16pt, font: songti)
+#let _blank(content) = underline(text(content, size: 16pt, font: songti), extent: 10pt)
+
+#let empty_par() = {
+  v(-1em)
+  box()
+}
+
+#let equation_num(_) = {
+  locate(loc => {
+    let chapt = counter(heading).at(loc).at(0)
+    let c = counter("equation-chapter" + str(chapt))
+    let n = c.at(loc).at(0)
+    "(" + str(chapt) + "-" + str(n + 1) + ")"
+  })
+}
+
+#let table_num(_) = {
+  locate(loc => {
+    let chapt = counter(heading).at(loc).at(0)
+    let c = counter("table-chapter" + str(chapt))
+    let n = c.at(loc).at(0)
+    str(chapt) + "-" + str(n + 1)
+  })
+}
+
+#let image_num(_) = {
+  locate(loc => {
+    let chapt = counter(heading).at(loc).at(0)
+    let c = counter("image-chapter" + str(chapt))
+    let n = c.at(loc).at(0)
+    str(chapt) + "-" + str(n + 1)
+  })
+}
+
+#let code_num(_) = {
+  locate(loc => {
+    let chapt = counter(heading).at(loc).at(0)
+    let c = counter("code-chapter" + str(chapt))
+    let n = c.at(loc).at(0)
+    str(chapt) + "-" + str(n + 1)
+  })
+}
+
+#let equation(equation, caption: "") = {
+  figure(
+    equation,
+    caption: caption,
+    supplement: [公式],
+    numbering: equation_num,
+    kind: "equation",
+  )
+}
+
+#let tbl(tbl, caption: "") = {
+  figure(
+    tbl,
+    caption: caption,
+    supplement: [表],
+    numbering: table_num,
+    kind: "table",
+  )
+}
+
+#let img(img, caption: "") = {
+  figure(
+    img,
+    caption: caption,
+    supplement: [图],
+    numbering: image_num,
+    kind: "image",
+  )
+}
+
+#let code(code, caption: "") = {
+  figure(
+    align(left)[
+      #code
+    ],
+    caption: caption,
+    supplement: [代码],
+    numbering: code_num,
+    kind: "code",
+  )
+}
+
+
+
+#let info_key(body) = {
+      rect(width: 100%, inset: 2pt, 
+       stroke: none,
+       text(
+        font: songti,
+        size: 16pt,
+        body
+      ))
+    }
+
+    #let info_value(body) = {
+      rect(
+        width: 100%,
+        inset: 2pt,
+        stroke: (
+          bottom: 1pt + black
+        ),
+        text(
+          font: songti,
+          size: 16pt,
+          bottom-edge: "descender"
+        )[
+          #body
+        ]
+      ) 
+    }
+
+// custom table of content
+#let toc() = {
+  align(center)[
+    #text(font: heiti, size: 18pt, "目    录")
+  ]
+
+  parbreak()
+
+  set text(font: heiti, size: 12pt)
+  set par(first-line-indent: 0pt)
+
+  show outline: it => {
+      set text(font: heiti, size: 12pt)
+      it
+      parbreak()
+    }
+
+    outline(
+    title: none,
+    indent: true,
+    )
+}
+
+#let cover( 
+  title:"",
+  author:"",
+  name:"",
+  class:"",
+  grade:"",
+  department:"",
+  date:(2023, 04, 17),
+  id:"",
+  body,
+) = {
+  align(center + horizon)[
+    #image("./img/校名.png", width: 60%)
+    #text(title, size: 24pt, font: songti, weight: "bold")\
+    #text("(" + grade + "级)", size: 20pt, font: songti)\
+    #image("./img/校徽.png", width: 40%)
+
+      #grid(
+      columns: (70pt, 180pt),
+      rows: (40pt, 40pt),
+      gutter: 3pt,
+      info_key("实验题目"),
+      info_value(name),
+      info_key("学生姓名"),
+      info_value(author),
+      info_key("学　　号"),
+      info_value(id),
+      info_key("专业班级"),
+      info_value(class),
+      info_key("所在学院"),
+      info_value(department),
+      info_key("提交日期"),
+      info_value(text(font: songti,size: 16pt,)[#date.at(0) 年 #date.at(1) 月 #date.at(2) 日]),
+  )
+  ]
+
+  pagebreak()
+
+  set heading(numbering: (..nums) => {
+    nums.pos().map(str).join(".") + "　"
+  })
+
+  show heading.where(level: 1): it => {
+    set align(center)
+    set text(weight: "bold", font: songti, size: 14pt)
+    set block(spacing: 1em)
+    it
+  }
+  show heading.where(level: 2): it => {
+    set text(weight: "bold", font: songti, size: 12.5pt)
+    it
+  }
+
+  toc()
+
+  show figure: it => {
+    set align(center)
+    if it.kind == "image" {
+      set text(font: heiti, size: 12pt)
+      it.body
+      it.supplement
+      " " + it.counter.display(it.numbering)
+      "　" + it.caption
+      locate(loc => {
+        let chapt = counter(heading).at(loc).at(0)
+        let c = counter("image-chapter" + str(chapt))
+        c.step()
+      })
+    } else if it.kind == "table" {
+      set text(font: heiti, size: 12pt)
+      it.supplement
+      " " + it.counter.display(it.numbering)
+      "　" + it.caption
+      set text(font: songti, size: 10.5pt)
+      it.body
+      locate(loc => {
+        let chapt = counter(heading).at(loc).at(0)
+        let c = counter("table-chapter" + str(chapt))
+        c.step()
+      })
+    } else if it.kind == "equation" {
+      // 通过大比例来达到中间和靠右的排布
+      grid(
+        columns: (20fr, 1fr),
+        it.body,
+        align(center + horizon, 
+          it.counter.display(it.numbering)
+        )
+      )
+      locate(loc => {
+        let chapt = counter(heading).at(loc).at(0)
+        let c = counter("equation-chapter" + str(chapt))
+        c.step()
+      })
+    } else if it.kind == "code"{
+      set text(font: songti, size: 10.5pt)
+      it.body
+
+      set text(font: songti, size: 10pt)
+      it.supplement
+      " " + it.counter.display(it.numbering)
+      "　" + it.caption
+
+      locate(loc => {
+        let chapt = counter(heading).at(loc).at(0)
+        let c = counter("code-chapter" + str(chapt))
+        c.step()
+      })
+    } else {
+      it
+    }
+  }
+
+  set page (
+    numbering: "1 / 1"
+  )
+
+  pagebreak()
+  set text(font: songti, size: 10.5pt)
+  set par(leading: 1.25em, first-line-indent: 2em)
+
+  show heading: it => {
+    set text(weight: "bold", font: heiti, size: 12pt)
+    set block(above: 1.5em, below: 1em)
+    it
+  } + empty_par()
+
+  counter(page).update(1)
+  body
+}

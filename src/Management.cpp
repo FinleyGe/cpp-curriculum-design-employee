@@ -1,8 +1,9 @@
 #include "Management.hpp"
 Management::Management() { load(); }
-
+Management::~Management() { save(); }
+const string path = "/home/finley/data.txt";
 int Management::save() {
-  std::ofstream fout("data.txt");
+  std::ofstream fout(path);
   if (!fout.is_open()) {
     return false;
   }
@@ -18,7 +19,7 @@ int Management::save() {
 }
 
 int Management::load() {
-  std::ifstream fin("data.txt");
+  std::ifstream fin(path);
   if (!fin.is_open()) {
     return false;
   }
@@ -56,7 +57,7 @@ int Management::deleteEmployee(const string &id) {
     }
     p = p->next;
   }
-  if (p == nullptr) {
+  if (p == employees.end()) {
     return -1;
   }
   employees.remove(p->data);
@@ -105,8 +106,8 @@ Management::searchEmployee(const std::string &keyword) const {
   return list;
 }
 
-string Management::statisticsByDepartment() const {
-  string res;
+std::map<std::string, std::map<Education, int>>
+Management::statisticsByDepartmentMap() const {
   std::map<string, std::map<Education, int>> m;
   auto *p = employees.begin();
   while (p != employees.end()) {
@@ -114,6 +115,30 @@ string Management::statisticsByDepartment() const {
     m[info.department][info.education]++;
     p = p->next;
   }
+  return m;
+}
+
+std::map<Education, int> Management::statisticsByEducationMap() const {
+  std::map<Education, int> m;
+  auto *p = employees.begin();
+  while (p != employees.end()) {
+    auto info = p->data.getInfo();
+    m[info.education]++;
+    p = p->next;
+  }
+  return m;
+}
+
+string Management::statisticsByDepartment() const {
+  string res;
+  // std::map<string, std::map<Education, int>> m;
+  // auto *p = employees.begin();
+  // while (p != employees.end()) {
+  //   auto info = p->data.getInfo();
+  //   m[info.department][info.education]++;
+  //   p = p->next;
+  // }
+  auto m = statisticsByDepartmentMap();
   for (auto &i : m) {
     res += "department: " + i.first + "\n";
     for (auto &j : i.second) {

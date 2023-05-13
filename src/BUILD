@@ -1,5 +1,3 @@
-# load("@rules_cc//cc:defs.bzl", "cc_binary")
-
 cc_library (
   name = "employee",
   srcs = ["Employee.cpp"],
@@ -26,7 +24,7 @@ cc_library (
 
 
 cc_binary (
-  name = "employee-management",
+  name = "main",
   srcs = ["UserInterface.cpp"],
   deps = [
     "//src:validate",

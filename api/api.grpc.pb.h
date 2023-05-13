@@ -35,6 +35,55 @@ class EmployeeService final {
   class StubInterface {
    public:
     virtual ~StubInterface() {}
+    virtual ::grpc::Status AddEmployee(::grpc::ClientContext* context, const ::api::AddEmployeeRequest& request, ::api::AddEmployeeResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::api::AddEmployeeResponse>> AsyncAddEmployee(::grpc::ClientContext* context, const ::api::AddEmployeeRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::api::AddEmployeeResponse>>(AsyncAddEmployeeRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::api::AddEmployeeResponse>> PrepareAsyncAddEmployee(::grpc::ClientContext* context, const ::api::AddEmployeeRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::api::AddEmployeeResponse>>(PrepareAsyncAddEmployeeRaw(context, request, cq));
+    }
+    virtual ::grpc::Status DeleteEmployee(::grpc::ClientContext* context, const ::api::DeleteEmployeeRequest& request, ::api::DeleteEmployeeResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::api::DeleteEmployeeResponse>> AsyncDeleteEmployee(::grpc::ClientContext* context, const ::api::DeleteEmployeeRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::api::DeleteEmployeeResponse>>(AsyncDeleteEmployeeRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::api::DeleteEmployeeResponse>> PrepareAsyncDeleteEmployee(::grpc::ClientContext* context, const ::api::DeleteEmployeeRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::api::DeleteEmployeeResponse>>(PrepareAsyncDeleteEmployeeRaw(context, request, cq));
+    }
+    virtual ::grpc::Status UpdateEmployee(::grpc::ClientContext* context, const ::api::UpdateEmployeeRequest& request, ::api::UpdateEmployeeResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::api::UpdateEmployeeResponse>> AsyncUpdateEmployee(::grpc::ClientContext* context, const ::api::UpdateEmployeeRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::api::UpdateEmployeeResponse>>(AsyncUpdateEmployeeRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::api::UpdateEmployeeResponse>> PrepareAsyncUpdateEmployee(::grpc::ClientContext* context, const ::api::UpdateEmployeeRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::api::UpdateEmployeeResponse>>(PrepareAsyncUpdateEmployeeRaw(context, request, cq));
+    }
+    virtual ::grpc::Status GetEmployee(::grpc::ClientContext* context, const ::api::GetEmployeeRequest& request, ::api::GetEmployeeResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::api::GetEmployeeResponse>> AsyncGetEmployee(::grpc::ClientContext* context, const ::api::GetEmployeeRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::api::GetEmployeeResponse>>(AsyncGetEmployeeRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::api::GetEmployeeResponse>> PrepareAsyncGetEmployee(::grpc::ClientContext* context, const ::api::GetEmployeeRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::api::GetEmployeeResponse>>(PrepareAsyncGetEmployeeRaw(context, request, cq));
+    }
+    virtual ::grpc::Status GetEmployeeByKeyword(::grpc::ClientContext* context, const ::api::GetEmployeeByKeywordRequest& request, ::api::GetEmployeeByKeywordResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::api::GetEmployeeByKeywordResponse>> AsyncGetEmployeeByKeyword(::grpc::ClientContext* context, const ::api::GetEmployeeByKeywordRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::api::GetEmployeeByKeywordResponse>>(AsyncGetEmployeeByKeywordRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::api::GetEmployeeByKeywordResponse>> PrepareAsyncGetEmployeeByKeyword(::grpc::ClientContext* context, const ::api::GetEmployeeByKeywordRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::api::GetEmployeeByKeywordResponse>>(PrepareAsyncGetEmployeeByKeywordRaw(context, request, cq));
+    }
+    virtual ::grpc::Status StatisticByDepartment(::grpc::ClientContext* context, const ::api::StatisticByDepartmentRequest& request, ::api::StatisticByDepartmentResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::api::StatisticByDepartmentResponse>> AsyncStatisticByDepartment(::grpc::ClientContext* context, const ::api::StatisticByDepartmentRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::api::StatisticByDepartmentResponse>>(AsyncStatisticByDepartmentRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::api::StatisticByDepartmentResponse>> PrepareAsyncStatisticByDepartment(::grpc::ClientContext* context, const ::api::StatisticByDepartmentRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::api::StatisticByDepartmentResponse>>(PrepareAsyncStatisticByDepartmentRaw(context, request, cq));
+    }
+    virtual ::grpc::Status StatisticByEducation(::grpc::ClientContext* context, const ::api::StatisticByEducationRequest& request, ::api::StatisticByEducationResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::api::StatisticByEducationResponse>> AsyncStatisticByEducation(::grpc::ClientContext* context, const ::api::StatisticByEducationRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::api::StatisticByEducationResponse>>(AsyncStatisticByEducationRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::api::StatisticByEducationResponse>> PrepareAsyncStatisticByEducation(::grpc::ClientContext* context, const ::api::StatisticByEducationRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::api::StatisticByEducationResponse>>(PrepareAsyncStatisticByEducationRaw(context, request, cq));
+    }
     virtual ::grpc::Status Test(::grpc::ClientContext* context, const ::api::TestRequest& request, ::api::TestResponse* response) = 0;
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::api::TestResponse>> AsyncTest(::grpc::ClientContext* context, const ::api::TestRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::api::TestResponse>>(AsyncTestRaw(context, request, cq));
@@ -45,6 +94,20 @@ class EmployeeService final {
     class async_interface {
      public:
       virtual ~async_interface() {}
+      virtual void AddEmployee(::grpc::ClientContext* context, const ::api::AddEmployeeRequest* request, ::api::AddEmployeeResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void AddEmployee(::grpc::ClientContext* context, const ::api::AddEmployeeRequest* request, ::api::AddEmployeeResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void DeleteEmployee(::grpc::ClientContext* context, const ::api::DeleteEmployeeRequest* request, ::api::DeleteEmployeeResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void DeleteEmployee(::grpc::ClientContext* context, const ::api::DeleteEmployeeRequest* request, ::api::DeleteEmployeeResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void UpdateEmployee(::grpc::ClientContext* context, const ::api::UpdateEmployeeRequest* request, ::api::UpdateEmployeeResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void UpdateEmployee(::grpc::ClientContext* context, const ::api::UpdateEmployeeRequest* request, ::api::UpdateEmployeeResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void GetEmployee(::grpc::ClientContext* context, const ::api::GetEmployeeRequest* request, ::api::GetEmployeeResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void GetEmployee(::grpc::ClientContext* context, const ::api::GetEmployeeRequest* request, ::api::GetEmployeeResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void GetEmployeeByKeyword(::grpc::ClientContext* context, const ::api::GetEmployeeByKeywordRequest* request, ::api::GetEmployeeByKeywordResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void GetEmployeeByKeyword(::grpc::ClientContext* context, const ::api::GetEmployeeByKeywordRequest* request, ::api::GetEmployeeByKeywordResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void StatisticByDepartment(::grpc::ClientContext* context, const ::api::StatisticByDepartmentRequest* request, ::api::StatisticByDepartmentResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void StatisticByDepartment(::grpc::ClientContext* context, const ::api::StatisticByDepartmentRequest* request, ::api::StatisticByDepartmentResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void StatisticByEducation(::grpc::ClientContext* context, const ::api::StatisticByEducationRequest* request, ::api::StatisticByEducationResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void StatisticByEducation(::grpc::ClientContext* context, const ::api::StatisticByEducationRequest* request, ::api::StatisticByEducationResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void Test(::grpc::ClientContext* context, const ::api::TestRequest* request, ::api::TestResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void Test(::grpc::ClientContext* context, const ::api::TestRequest* request, ::api::TestResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
     };
@@ -52,12 +115,75 @@ class EmployeeService final {
     virtual class async_interface* async() { return nullptr; }
     class async_interface* experimental_async() { return async(); }
    private:
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::api::AddEmployeeResponse>* AsyncAddEmployeeRaw(::grpc::ClientContext* context, const ::api::AddEmployeeRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::api::AddEmployeeResponse>* PrepareAsyncAddEmployeeRaw(::grpc::ClientContext* context, const ::api::AddEmployeeRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::api::DeleteEmployeeResponse>* AsyncDeleteEmployeeRaw(::grpc::ClientContext* context, const ::api::DeleteEmployeeRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::api::DeleteEmployeeResponse>* PrepareAsyncDeleteEmployeeRaw(::grpc::ClientContext* context, const ::api::DeleteEmployeeRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::api::UpdateEmployeeResponse>* AsyncUpdateEmployeeRaw(::grpc::ClientContext* context, const ::api::UpdateEmployeeRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::api::UpdateEmployeeResponse>* PrepareAsyncUpdateEmployeeRaw(::grpc::ClientContext* context, const ::api::UpdateEmployeeRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::api::GetEmployeeResponse>* AsyncGetEmployeeRaw(::grpc::ClientContext* context, const ::api::GetEmployeeRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::api::GetEmployeeResponse>* PrepareAsyncGetEmployeeRaw(::grpc::ClientContext* context, const ::api::GetEmployeeRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::api::GetEmployeeByKeywordResponse>* AsyncGetEmployeeByKeywordRaw(::grpc::ClientContext* context, const ::api::GetEmployeeByKeywordRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::api::GetEmployeeByKeywordResponse>* PrepareAsyncGetEmployeeByKeywordRaw(::grpc::ClientContext* context, const ::api::GetEmployeeByKeywordRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::api::StatisticByDepartmentResponse>* AsyncStatisticByDepartmentRaw(::grpc::ClientContext* context, const ::api::StatisticByDepartmentRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::api::StatisticByDepartmentResponse>* PrepareAsyncStatisticByDepartmentRaw(::grpc::ClientContext* context, const ::api::StatisticByDepartmentRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::api::StatisticByEducationResponse>* AsyncStatisticByEducationRaw(::grpc::ClientContext* context, const ::api::StatisticByEducationRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::api::StatisticByEducationResponse>* PrepareAsyncStatisticByEducationRaw(::grpc::ClientContext* context, const ::api::StatisticByEducationRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::api::TestResponse>* AsyncTestRaw(::grpc::ClientContext* context, const ::api::TestRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::api::TestResponse>* PrepareAsyncTestRaw(::grpc::ClientContext* context, const ::api::TestRequest& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
     Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
+    ::grpc::Status AddEmployee(::grpc::ClientContext* context, const ::api::AddEmployeeRequest& request, ::api::AddEmployeeResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::api::AddEmployeeResponse>> AsyncAddEmployee(::grpc::ClientContext* context, const ::api::AddEmployeeRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::api::AddEmployeeResponse>>(AsyncAddEmployeeRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::api::AddEmployeeResponse>> PrepareAsyncAddEmployee(::grpc::ClientContext* context, const ::api::AddEmployeeRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::api::AddEmployeeResponse>>(PrepareAsyncAddEmployeeRaw(context, request, cq));
+    }
+    ::grpc::Status DeleteEmployee(::grpc::ClientContext* context, const ::api::DeleteEmployeeRequest& request, ::api::DeleteEmployeeResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::api::DeleteEmployeeResponse>> AsyncDeleteEmployee(::grpc::ClientContext* context, const ::api::DeleteEmployeeRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::api::DeleteEmployeeResponse>>(AsyncDeleteEmployeeRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::api::DeleteEmployeeResponse>> PrepareAsyncDeleteEmployee(::grpc::ClientContext* context, const ::api::DeleteEmployeeRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::api::DeleteEmployeeResponse>>(PrepareAsyncDeleteEmployeeRaw(context, request, cq));
+    }
+    ::grpc::Status UpdateEmployee(::grpc::ClientContext* context, const ::api::UpdateEmployeeRequest& request, ::api::UpdateEmployeeResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::api::UpdateEmployeeResponse>> AsyncUpdateEmployee(::grpc::ClientContext* context, const ::api::UpdateEmployeeRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::api::UpdateEmployeeResponse>>(AsyncUpdateEmployeeRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::api::UpdateEmployeeResponse>> PrepareAsyncUpdateEmployee(::grpc::ClientContext* context, const ::api::UpdateEmployeeRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::api::UpdateEmployeeResponse>>(PrepareAsyncUpdateEmployeeRaw(context, request, cq));
+    }
+    ::grpc::Status GetEmployee(::grpc::ClientContext* context, const ::api::GetEmployeeRequest& request, ::api::GetEmployeeResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::api::GetEmployeeResponse>> AsyncGetEmployee(::grpc::ClientContext* context, const ::api::GetEmployeeRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::api::GetEmployeeResponse>>(AsyncGetEmployeeRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::api::GetEmployeeResponse>> PrepareAsyncGetEmployee(::grpc::ClientContext* context, const ::api::GetEmployeeRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::api::GetEmployeeResponse>>(PrepareAsyncGetEmployeeRaw(context, request, cq));
+    }
+    ::grpc::Status GetEmployeeByKeyword(::grpc::ClientContext* context, const ::api::GetEmployeeByKeywordRequest& request, ::api::GetEmployeeByKeywordResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::api::GetEmployeeByKeywordResponse>> AsyncGetEmployeeByKeyword(::grpc::ClientContext* context, const ::api::GetEmployeeByKeywordRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::api::GetEmployeeByKeywordResponse>>(AsyncGetEmployeeByKeywordRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::api::GetEmployeeByKeywordResponse>> PrepareAsyncGetEmployeeByKeyword(::grpc::ClientContext* context, const ::api::GetEmployeeByKeywordRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::api::GetEmployeeByKeywordResponse>>(PrepareAsyncGetEmployeeByKeywordRaw(context, request, cq));
+    }
+    ::grpc::Status StatisticByDepartment(::grpc::ClientContext* context, const ::api::StatisticByDepartmentRequest& request, ::api::StatisticByDepartmentResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::api::StatisticByDepartmentResponse>> AsyncStatisticByDepartment(::grpc::ClientContext* context, const ::api::StatisticByDepartmentRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::api::StatisticByDepartmentResponse>>(AsyncStatisticByDepartmentRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::api::StatisticByDepartmentResponse>> PrepareAsyncStatisticByDepartment(::grpc::ClientContext* context, const ::api::StatisticByDepartmentRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::api::StatisticByDepartmentResponse>>(PrepareAsyncStatisticByDepartmentRaw(context, request, cq));
+    }
+    ::grpc::Status StatisticByEducation(::grpc::ClientContext* context, const ::api::StatisticByEducationRequest& request, ::api::StatisticByEducationResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::api::StatisticByEducationResponse>> AsyncStatisticByEducation(::grpc::ClientContext* context, const ::api::StatisticByEducationRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::api::StatisticByEducationResponse>>(AsyncStatisticByEducationRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::api::StatisticByEducationResponse>> PrepareAsyncStatisticByEducation(::grpc::ClientContext* context, const ::api::StatisticByEducationRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::api::StatisticByEducationResponse>>(PrepareAsyncStatisticByEducationRaw(context, request, cq));
+    }
     ::grpc::Status Test(::grpc::ClientContext* context, const ::api::TestRequest& request, ::api::TestResponse* response) override;
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::api::TestResponse>> AsyncTest(::grpc::ClientContext* context, const ::api::TestRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::api::TestResponse>>(AsyncTestRaw(context, request, cq));
@@ -68,6 +194,20 @@ class EmployeeService final {
     class async final :
       public StubInterface::async_interface {
      public:
+      void AddEmployee(::grpc::ClientContext* context, const ::api::AddEmployeeRequest* request, ::api::AddEmployeeResponse* response, std::function<void(::grpc::Status)>) override;
+      void AddEmployee(::grpc::ClientContext* context, const ::api::AddEmployeeRequest* request, ::api::AddEmployeeResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void DeleteEmployee(::grpc::ClientContext* context, const ::api::DeleteEmployeeRequest* request, ::api::DeleteEmployeeResponse* response, std::function<void(::grpc::Status)>) override;
+      void DeleteEmployee(::grpc::ClientContext* context, const ::api::DeleteEmployeeRequest* request, ::api::DeleteEmployeeResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void UpdateEmployee(::grpc::ClientContext* context, const ::api::UpdateEmployeeRequest* request, ::api::UpdateEmployeeResponse* response, std::function<void(::grpc::Status)>) override;
+      void UpdateEmployee(::grpc::ClientContext* context, const ::api::UpdateEmployeeRequest* request, ::api::UpdateEmployeeResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void GetEmployee(::grpc::ClientContext* context, const ::api::GetEmployeeRequest* request, ::api::GetEmployeeResponse* response, std::function<void(::grpc::Status)>) override;
+      void GetEmployee(::grpc::ClientContext* context, const ::api::GetEmployeeRequest* request, ::api::GetEmployeeResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void GetEmployeeByKeyword(::grpc::ClientContext* context, const ::api::GetEmployeeByKeywordRequest* request, ::api::GetEmployeeByKeywordResponse* response, std::function<void(::grpc::Status)>) override;
+      void GetEmployeeByKeyword(::grpc::ClientContext* context, const ::api::GetEmployeeByKeywordRequest* request, ::api::GetEmployeeByKeywordResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void StatisticByDepartment(::grpc::ClientContext* context, const ::api::StatisticByDepartmentRequest* request, ::api::StatisticByDepartmentResponse* response, std::function<void(::grpc::Status)>) override;
+      void StatisticByDepartment(::grpc::ClientContext* context, const ::api::StatisticByDepartmentRequest* request, ::api::StatisticByDepartmentResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void StatisticByEducation(::grpc::ClientContext* context, const ::api::StatisticByEducationRequest* request, ::api::StatisticByEducationResponse* response, std::function<void(::grpc::Status)>) override;
+      void StatisticByEducation(::grpc::ClientContext* context, const ::api::StatisticByEducationRequest* request, ::api::StatisticByEducationResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void Test(::grpc::ClientContext* context, const ::api::TestRequest* request, ::api::TestResponse* response, std::function<void(::grpc::Status)>) override;
       void Test(::grpc::ClientContext* context, const ::api::TestRequest* request, ::api::TestResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
      private:
@@ -81,8 +221,29 @@ class EmployeeService final {
    private:
     std::shared_ptr< ::grpc::ChannelInterface> channel_;
     class async async_stub_{this};
+    ::grpc::ClientAsyncResponseReader< ::api::AddEmployeeResponse>* AsyncAddEmployeeRaw(::grpc::ClientContext* context, const ::api::AddEmployeeRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::api::AddEmployeeResponse>* PrepareAsyncAddEmployeeRaw(::grpc::ClientContext* context, const ::api::AddEmployeeRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::api::DeleteEmployeeResponse>* AsyncDeleteEmployeeRaw(::grpc::ClientContext* context, const ::api::DeleteEmployeeRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::api::DeleteEmployeeResponse>* PrepareAsyncDeleteEmployeeRaw(::grpc::ClientContext* context, const ::api::DeleteEmployeeRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::api::UpdateEmployeeResponse>* AsyncUpdateEmployeeRaw(::grpc::ClientContext* context, const ::api::UpdateEmployeeRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::api::UpdateEmployeeResponse>* PrepareAsyncUpdateEmployeeRaw(::grpc::ClientContext* context, const ::api::UpdateEmployeeRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::api::GetEmployeeResponse>* AsyncGetEmployeeRaw(::grpc::ClientContext* context, const ::api::GetEmployeeRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::api::GetEmployeeResponse>* PrepareAsyncGetEmployeeRaw(::grpc::ClientContext* context, const ::api::GetEmployeeRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::api::GetEmployeeByKeywordResponse>* AsyncGetEmployeeByKeywordRaw(::grpc::ClientContext* context, const ::api::GetEmployeeByKeywordRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::api::GetEmployeeByKeywordResponse>* PrepareAsyncGetEmployeeByKeywordRaw(::grpc::ClientContext* context, const ::api::GetEmployeeByKeywordRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::api::StatisticByDepartmentResponse>* AsyncStatisticByDepartmentRaw(::grpc::ClientContext* context, const ::api::StatisticByDepartmentRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::api::StatisticByDepartmentResponse>* PrepareAsyncStatisticByDepartmentRaw(::grpc::ClientContext* context, const ::api::StatisticByDepartmentRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::api::StatisticByEducationResponse>* AsyncStatisticByEducationRaw(::grpc::ClientContext* context, const ::api::StatisticByEducationRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::api::StatisticByEducationResponse>* PrepareAsyncStatisticByEducationRaw(::grpc::ClientContext* context, const ::api::StatisticByEducationRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::api::TestResponse>* AsyncTestRaw(::grpc::ClientContext* context, const ::api::TestRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::api::TestResponse>* PrepareAsyncTestRaw(::grpc::ClientContext* context, const ::api::TestRequest& request, ::grpc::CompletionQueue* cq) override;
+    const ::grpc::internal::RpcMethod rpcmethod_AddEmployee_;
+    const ::grpc::internal::RpcMethod rpcmethod_DeleteEmployee_;
+    const ::grpc::internal::RpcMethod rpcmethod_UpdateEmployee_;
+    const ::grpc::internal::RpcMethod rpcmethod_GetEmployee_;
+    const ::grpc::internal::RpcMethod rpcmethod_GetEmployeeByKeyword_;
+    const ::grpc::internal::RpcMethod rpcmethod_StatisticByDepartment_;
+    const ::grpc::internal::RpcMethod rpcmethod_StatisticByEducation_;
     const ::grpc::internal::RpcMethod rpcmethod_Test_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
@@ -91,7 +252,154 @@ class EmployeeService final {
    public:
     Service();
     virtual ~Service();
+    virtual ::grpc::Status AddEmployee(::grpc::ServerContext* context, const ::api::AddEmployeeRequest* request, ::api::AddEmployeeResponse* response);
+    virtual ::grpc::Status DeleteEmployee(::grpc::ServerContext* context, const ::api::DeleteEmployeeRequest* request, ::api::DeleteEmployeeResponse* response);
+    virtual ::grpc::Status UpdateEmployee(::grpc::ServerContext* context, const ::api::UpdateEmployeeRequest* request, ::api::UpdateEmployeeResponse* response);
+    virtual ::grpc::Status GetEmployee(::grpc::ServerContext* context, const ::api::GetEmployeeRequest* request, ::api::GetEmployeeResponse* response);
+    virtual ::grpc::Status GetEmployeeByKeyword(::grpc::ServerContext* context, const ::api::GetEmployeeByKeywordRequest* request, ::api::GetEmployeeByKeywordResponse* response);
+    virtual ::grpc::Status StatisticByDepartment(::grpc::ServerContext* context, const ::api::StatisticByDepartmentRequest* request, ::api::StatisticByDepartmentResponse* response);
+    virtual ::grpc::Status StatisticByEducation(::grpc::ServerContext* context, const ::api::StatisticByEducationRequest* request, ::api::StatisticByEducationResponse* response);
     virtual ::grpc::Status Test(::grpc::ServerContext* context, const ::api::TestRequest* request, ::api::TestResponse* response);
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_AddEmployee : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_AddEmployee() {
+      ::grpc::Service::MarkMethodAsync(0);
+    }
+    ~WithAsyncMethod_AddEmployee() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status AddEmployee(::grpc::ServerContext* /*context*/, const ::api::AddEmployeeRequest* /*request*/, ::api::AddEmployeeResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestAddEmployee(::grpc::ServerContext* context, ::api::AddEmployeeRequest* request, ::grpc::ServerAsyncResponseWriter< ::api::AddEmployeeResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_DeleteEmployee : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_DeleteEmployee() {
+      ::grpc::Service::MarkMethodAsync(1);
+    }
+    ~WithAsyncMethod_DeleteEmployee() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status DeleteEmployee(::grpc::ServerContext* /*context*/, const ::api::DeleteEmployeeRequest* /*request*/, ::api::DeleteEmployeeResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestDeleteEmployee(::grpc::ServerContext* context, ::api::DeleteEmployeeRequest* request, ::grpc::ServerAsyncResponseWriter< ::api::DeleteEmployeeResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_UpdateEmployee : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_UpdateEmployee() {
+      ::grpc::Service::MarkMethodAsync(2);
+    }
+    ~WithAsyncMethod_UpdateEmployee() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status UpdateEmployee(::grpc::ServerContext* /*context*/, const ::api::UpdateEmployeeRequest* /*request*/, ::api::UpdateEmployeeResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestUpdateEmployee(::grpc::ServerContext* context, ::api::UpdateEmployeeRequest* request, ::grpc::ServerAsyncResponseWriter< ::api::UpdateEmployeeResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_GetEmployee : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_GetEmployee() {
+      ::grpc::Service::MarkMethodAsync(3);
+    }
+    ~WithAsyncMethod_GetEmployee() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetEmployee(::grpc::ServerContext* /*context*/, const ::api::GetEmployeeRequest* /*request*/, ::api::GetEmployeeResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetEmployee(::grpc::ServerContext* context, ::api::GetEmployeeRequest* request, ::grpc::ServerAsyncResponseWriter< ::api::GetEmployeeResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_GetEmployeeByKeyword : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_GetEmployeeByKeyword() {
+      ::grpc::Service::MarkMethodAsync(4);
+    }
+    ~WithAsyncMethod_GetEmployeeByKeyword() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetEmployeeByKeyword(::grpc::ServerContext* /*context*/, const ::api::GetEmployeeByKeywordRequest* /*request*/, ::api::GetEmployeeByKeywordResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetEmployeeByKeyword(::grpc::ServerContext* context, ::api::GetEmployeeByKeywordRequest* request, ::grpc::ServerAsyncResponseWriter< ::api::GetEmployeeByKeywordResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(4, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_StatisticByDepartment : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_StatisticByDepartment() {
+      ::grpc::Service::MarkMethodAsync(5);
+    }
+    ~WithAsyncMethod_StatisticByDepartment() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status StatisticByDepartment(::grpc::ServerContext* /*context*/, const ::api::StatisticByDepartmentRequest* /*request*/, ::api::StatisticByDepartmentResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestStatisticByDepartment(::grpc::ServerContext* context, ::api::StatisticByDepartmentRequest* request, ::grpc::ServerAsyncResponseWriter< ::api::StatisticByDepartmentResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(5, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_StatisticByEducation : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_StatisticByEducation() {
+      ::grpc::Service::MarkMethodAsync(6);
+    }
+    ~WithAsyncMethod_StatisticByEducation() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status StatisticByEducation(::grpc::ServerContext* /*context*/, const ::api::StatisticByEducationRequest* /*request*/, ::api::StatisticByEducationResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestStatisticByEducation(::grpc::ServerContext* context, ::api::StatisticByEducationRequest* request, ::grpc::ServerAsyncResponseWriter< ::api::StatisticByEducationResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(6, context, request, response, new_call_cq, notification_cq, tag);
+    }
   };
   template <class BaseClass>
   class WithAsyncMethod_Test : public BaseClass {
@@ -99,7 +407,7 @@ class EmployeeService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_Test() {
-      ::grpc::Service::MarkMethodAsync(0);
+      ::grpc::Service::MarkMethodAsync(7);
     }
     ~WithAsyncMethod_Test() override {
       BaseClassMustBeDerivedFromService(this);
@@ -110,23 +418,212 @@ class EmployeeService final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestTest(::grpc::ServerContext* context, ::api::TestRequest* request, ::grpc::ServerAsyncResponseWriter< ::api::TestResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(7, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
-  typedef WithAsyncMethod_Test<Service > AsyncService;
+  typedef WithAsyncMethod_AddEmployee<WithAsyncMethod_DeleteEmployee<WithAsyncMethod_UpdateEmployee<WithAsyncMethod_GetEmployee<WithAsyncMethod_GetEmployeeByKeyword<WithAsyncMethod_StatisticByDepartment<WithAsyncMethod_StatisticByEducation<WithAsyncMethod_Test<Service > > > > > > > > AsyncService;
+  template <class BaseClass>
+  class WithCallbackMethod_AddEmployee : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_AddEmployee() {
+      ::grpc::Service::MarkMethodCallback(0,
+          new ::grpc::internal::CallbackUnaryHandler< ::api::AddEmployeeRequest, ::api::AddEmployeeResponse>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::api::AddEmployeeRequest* request, ::api::AddEmployeeResponse* response) { return this->AddEmployee(context, request, response); }));}
+    void SetMessageAllocatorFor_AddEmployee(
+        ::grpc::MessageAllocator< ::api::AddEmployeeRequest, ::api::AddEmployeeResponse>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(0);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::api::AddEmployeeRequest, ::api::AddEmployeeResponse>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_AddEmployee() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status AddEmployee(::grpc::ServerContext* /*context*/, const ::api::AddEmployeeRequest* /*request*/, ::api::AddEmployeeResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* AddEmployee(
+      ::grpc::CallbackServerContext* /*context*/, const ::api::AddEmployeeRequest* /*request*/, ::api::AddEmployeeResponse* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithCallbackMethod_DeleteEmployee : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_DeleteEmployee() {
+      ::grpc::Service::MarkMethodCallback(1,
+          new ::grpc::internal::CallbackUnaryHandler< ::api::DeleteEmployeeRequest, ::api::DeleteEmployeeResponse>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::api::DeleteEmployeeRequest* request, ::api::DeleteEmployeeResponse* response) { return this->DeleteEmployee(context, request, response); }));}
+    void SetMessageAllocatorFor_DeleteEmployee(
+        ::grpc::MessageAllocator< ::api::DeleteEmployeeRequest, ::api::DeleteEmployeeResponse>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(1);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::api::DeleteEmployeeRequest, ::api::DeleteEmployeeResponse>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_DeleteEmployee() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status DeleteEmployee(::grpc::ServerContext* /*context*/, const ::api::DeleteEmployeeRequest* /*request*/, ::api::DeleteEmployeeResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* DeleteEmployee(
+      ::grpc::CallbackServerContext* /*context*/, const ::api::DeleteEmployeeRequest* /*request*/, ::api::DeleteEmployeeResponse* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithCallbackMethod_UpdateEmployee : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_UpdateEmployee() {
+      ::grpc::Service::MarkMethodCallback(2,
+          new ::grpc::internal::CallbackUnaryHandler< ::api::UpdateEmployeeRequest, ::api::UpdateEmployeeResponse>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::api::UpdateEmployeeRequest* request, ::api::UpdateEmployeeResponse* response) { return this->UpdateEmployee(context, request, response); }));}
+    void SetMessageAllocatorFor_UpdateEmployee(
+        ::grpc::MessageAllocator< ::api::UpdateEmployeeRequest, ::api::UpdateEmployeeResponse>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(2);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::api::UpdateEmployeeRequest, ::api::UpdateEmployeeResponse>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_UpdateEmployee() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status UpdateEmployee(::grpc::ServerContext* /*context*/, const ::api::UpdateEmployeeRequest* /*request*/, ::api::UpdateEmployeeResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* UpdateEmployee(
+      ::grpc::CallbackServerContext* /*context*/, const ::api::UpdateEmployeeRequest* /*request*/, ::api::UpdateEmployeeResponse* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithCallbackMethod_GetEmployee : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_GetEmployee() {
+      ::grpc::Service::MarkMethodCallback(3,
+          new ::grpc::internal::CallbackUnaryHandler< ::api::GetEmployeeRequest, ::api::GetEmployeeResponse>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::api::GetEmployeeRequest* request, ::api::GetEmployeeResponse* response) { return this->GetEmployee(context, request, response); }));}
+    void SetMessageAllocatorFor_GetEmployee(
+        ::grpc::MessageAllocator< ::api::GetEmployeeRequest, ::api::GetEmployeeResponse>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(3);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::api::GetEmployeeRequest, ::api::GetEmployeeResponse>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_GetEmployee() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetEmployee(::grpc::ServerContext* /*context*/, const ::api::GetEmployeeRequest* /*request*/, ::api::GetEmployeeResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* GetEmployee(
+      ::grpc::CallbackServerContext* /*context*/, const ::api::GetEmployeeRequest* /*request*/, ::api::GetEmployeeResponse* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithCallbackMethod_GetEmployeeByKeyword : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_GetEmployeeByKeyword() {
+      ::grpc::Service::MarkMethodCallback(4,
+          new ::grpc::internal::CallbackUnaryHandler< ::api::GetEmployeeByKeywordRequest, ::api::GetEmployeeByKeywordResponse>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::api::GetEmployeeByKeywordRequest* request, ::api::GetEmployeeByKeywordResponse* response) { return this->GetEmployeeByKeyword(context, request, response); }));}
+    void SetMessageAllocatorFor_GetEmployeeByKeyword(
+        ::grpc::MessageAllocator< ::api::GetEmployeeByKeywordRequest, ::api::GetEmployeeByKeywordResponse>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(4);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::api::GetEmployeeByKeywordRequest, ::api::GetEmployeeByKeywordResponse>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_GetEmployeeByKeyword() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetEmployeeByKeyword(::grpc::ServerContext* /*context*/, const ::api::GetEmployeeByKeywordRequest* /*request*/, ::api::GetEmployeeByKeywordResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* GetEmployeeByKeyword(
+      ::grpc::CallbackServerContext* /*context*/, const ::api::GetEmployeeByKeywordRequest* /*request*/, ::api::GetEmployeeByKeywordResponse* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithCallbackMethod_StatisticByDepartment : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_StatisticByDepartment() {
+      ::grpc::Service::MarkMethodCallback(5,
+          new ::grpc::internal::CallbackUnaryHandler< ::api::StatisticByDepartmentRequest, ::api::StatisticByDepartmentResponse>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::api::StatisticByDepartmentRequest* request, ::api::StatisticByDepartmentResponse* response) { return this->StatisticByDepartment(context, request, response); }));}
+    void SetMessageAllocatorFor_StatisticByDepartment(
+        ::grpc::MessageAllocator< ::api::StatisticByDepartmentRequest, ::api::StatisticByDepartmentResponse>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(5);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::api::StatisticByDepartmentRequest, ::api::StatisticByDepartmentResponse>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_StatisticByDepartment() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status StatisticByDepartment(::grpc::ServerContext* /*context*/, const ::api::StatisticByDepartmentRequest* /*request*/, ::api::StatisticByDepartmentResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* StatisticByDepartment(
+      ::grpc::CallbackServerContext* /*context*/, const ::api::StatisticByDepartmentRequest* /*request*/, ::api::StatisticByDepartmentResponse* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithCallbackMethod_StatisticByEducation : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_StatisticByEducation() {
+      ::grpc::Service::MarkMethodCallback(6,
+          new ::grpc::internal::CallbackUnaryHandler< ::api::StatisticByEducationRequest, ::api::StatisticByEducationResponse>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::api::StatisticByEducationRequest* request, ::api::StatisticByEducationResponse* response) { return this->StatisticByEducation(context, request, response); }));}
+    void SetMessageAllocatorFor_StatisticByEducation(
+        ::grpc::MessageAllocator< ::api::StatisticByEducationRequest, ::api::StatisticByEducationResponse>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(6);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::api::StatisticByEducationRequest, ::api::StatisticByEducationResponse>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_StatisticByEducation() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status StatisticByEducation(::grpc::ServerContext* /*context*/, const ::api::StatisticByEducationRequest* /*request*/, ::api::StatisticByEducationResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* StatisticByEducation(
+      ::grpc::CallbackServerContext* /*context*/, const ::api::StatisticByEducationRequest* /*request*/, ::api::StatisticByEducationResponse* /*response*/)  { return nullptr; }
+  };
   template <class BaseClass>
   class WithCallbackMethod_Test : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_Test() {
-      ::grpc::Service::MarkMethodCallback(0,
+      ::grpc::Service::MarkMethodCallback(7,
           new ::grpc::internal::CallbackUnaryHandler< ::api::TestRequest, ::api::TestResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::api::TestRequest* request, ::api::TestResponse* response) { return this->Test(context, request, response); }));}
     void SetMessageAllocatorFor_Test(
         ::grpc::MessageAllocator< ::api::TestRequest, ::api::TestResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(0);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(7);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::api::TestRequest, ::api::TestResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -141,15 +638,134 @@ class EmployeeService final {
     virtual ::grpc::ServerUnaryReactor* Test(
       ::grpc::CallbackServerContext* /*context*/, const ::api::TestRequest* /*request*/, ::api::TestResponse* /*response*/)  { return nullptr; }
   };
-  typedef WithCallbackMethod_Test<Service > CallbackService;
+  typedef WithCallbackMethod_AddEmployee<WithCallbackMethod_DeleteEmployee<WithCallbackMethod_UpdateEmployee<WithCallbackMethod_GetEmployee<WithCallbackMethod_GetEmployeeByKeyword<WithCallbackMethod_StatisticByDepartment<WithCallbackMethod_StatisticByEducation<WithCallbackMethod_Test<Service > > > > > > > > CallbackService;
   typedef CallbackService ExperimentalCallbackService;
+  template <class BaseClass>
+  class WithGenericMethod_AddEmployee : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_AddEmployee() {
+      ::grpc::Service::MarkMethodGeneric(0);
+    }
+    ~WithGenericMethod_AddEmployee() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status AddEmployee(::grpc::ServerContext* /*context*/, const ::api::AddEmployeeRequest* /*request*/, ::api::AddEmployeeResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_DeleteEmployee : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_DeleteEmployee() {
+      ::grpc::Service::MarkMethodGeneric(1);
+    }
+    ~WithGenericMethod_DeleteEmployee() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status DeleteEmployee(::grpc::ServerContext* /*context*/, const ::api::DeleteEmployeeRequest* /*request*/, ::api::DeleteEmployeeResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_UpdateEmployee : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_UpdateEmployee() {
+      ::grpc::Service::MarkMethodGeneric(2);
+    }
+    ~WithGenericMethod_UpdateEmployee() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status UpdateEmployee(::grpc::ServerContext* /*context*/, const ::api::UpdateEmployeeRequest* /*request*/, ::api::UpdateEmployeeResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_GetEmployee : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_GetEmployee() {
+      ::grpc::Service::MarkMethodGeneric(3);
+    }
+    ~WithGenericMethod_GetEmployee() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetEmployee(::grpc::ServerContext* /*context*/, const ::api::GetEmployeeRequest* /*request*/, ::api::GetEmployeeResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_GetEmployeeByKeyword : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_GetEmployeeByKeyword() {
+      ::grpc::Service::MarkMethodGeneric(4);
+    }
+    ~WithGenericMethod_GetEmployeeByKeyword() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetEmployeeByKeyword(::grpc::ServerContext* /*context*/, const ::api::GetEmployeeByKeywordRequest* /*request*/, ::api::GetEmployeeByKeywordResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_StatisticByDepartment : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_StatisticByDepartment() {
+      ::grpc::Service::MarkMethodGeneric(5);
+    }
+    ~WithGenericMethod_StatisticByDepartment() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status StatisticByDepartment(::grpc::ServerContext* /*context*/, const ::api::StatisticByDepartmentRequest* /*request*/, ::api::StatisticByDepartmentResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_StatisticByEducation : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_StatisticByEducation() {
+      ::grpc::Service::MarkMethodGeneric(6);
+    }
+    ~WithGenericMethod_StatisticByEducation() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status StatisticByEducation(::grpc::ServerContext* /*context*/, const ::api::StatisticByEducationRequest* /*request*/, ::api::StatisticByEducationResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
   template <class BaseClass>
   class WithGenericMethod_Test : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_Test() {
-      ::grpc::Service::MarkMethodGeneric(0);
+      ::grpc::Service::MarkMethodGeneric(7);
     }
     ~WithGenericMethod_Test() override {
       BaseClassMustBeDerivedFromService(this);
@@ -161,12 +777,152 @@ class EmployeeService final {
     }
   };
   template <class BaseClass>
+  class WithRawMethod_AddEmployee : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_AddEmployee() {
+      ::grpc::Service::MarkMethodRaw(0);
+    }
+    ~WithRawMethod_AddEmployee() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status AddEmployee(::grpc::ServerContext* /*context*/, const ::api::AddEmployeeRequest* /*request*/, ::api::AddEmployeeResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestAddEmployee(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_DeleteEmployee : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_DeleteEmployee() {
+      ::grpc::Service::MarkMethodRaw(1);
+    }
+    ~WithRawMethod_DeleteEmployee() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status DeleteEmployee(::grpc::ServerContext* /*context*/, const ::api::DeleteEmployeeRequest* /*request*/, ::api::DeleteEmployeeResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestDeleteEmployee(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_UpdateEmployee : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_UpdateEmployee() {
+      ::grpc::Service::MarkMethodRaw(2);
+    }
+    ~WithRawMethod_UpdateEmployee() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status UpdateEmployee(::grpc::ServerContext* /*context*/, const ::api::UpdateEmployeeRequest* /*request*/, ::api::UpdateEmployeeResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestUpdateEmployee(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_GetEmployee : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_GetEmployee() {
+      ::grpc::Service::MarkMethodRaw(3);
+    }
+    ~WithRawMethod_GetEmployee() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetEmployee(::grpc::ServerContext* /*context*/, const ::api::GetEmployeeRequest* /*request*/, ::api::GetEmployeeResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetEmployee(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_GetEmployeeByKeyword : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_GetEmployeeByKeyword() {
+      ::grpc::Service::MarkMethodRaw(4);
+    }
+    ~WithRawMethod_GetEmployeeByKeyword() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetEmployeeByKeyword(::grpc::ServerContext* /*context*/, const ::api::GetEmployeeByKeywordRequest* /*request*/, ::api::GetEmployeeByKeywordResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetEmployeeByKeyword(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(4, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_StatisticByDepartment : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_StatisticByDepartment() {
+      ::grpc::Service::MarkMethodRaw(5);
+    }
+    ~WithRawMethod_StatisticByDepartment() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status StatisticByDepartment(::grpc::ServerContext* /*context*/, const ::api::StatisticByDepartmentRequest* /*request*/, ::api::StatisticByDepartmentResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestStatisticByDepartment(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(5, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_StatisticByEducation : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_StatisticByEducation() {
+      ::grpc::Service::MarkMethodRaw(6);
+    }
+    ~WithRawMethod_StatisticByEducation() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status StatisticByEducation(::grpc::ServerContext* /*context*/, const ::api::StatisticByEducationRequest* /*request*/, ::api::StatisticByEducationResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestStatisticByEducation(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(6, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
   class WithRawMethod_Test : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_Test() {
-      ::grpc::Service::MarkMethodRaw(0);
+      ::grpc::Service::MarkMethodRaw(7);
     }
     ~WithRawMethod_Test() override {
       BaseClassMustBeDerivedFromService(this);
@@ -177,8 +933,162 @@ class EmployeeService final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestTest(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(7, context, request, response, new_call_cq, notification_cq, tag);
     }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_AddEmployee : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_AddEmployee() {
+      ::grpc::Service::MarkMethodRawCallback(0,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->AddEmployee(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_AddEmployee() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status AddEmployee(::grpc::ServerContext* /*context*/, const ::api::AddEmployeeRequest* /*request*/, ::api::AddEmployeeResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* AddEmployee(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_DeleteEmployee : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_DeleteEmployee() {
+      ::grpc::Service::MarkMethodRawCallback(1,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->DeleteEmployee(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_DeleteEmployee() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status DeleteEmployee(::grpc::ServerContext* /*context*/, const ::api::DeleteEmployeeRequest* /*request*/, ::api::DeleteEmployeeResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* DeleteEmployee(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_UpdateEmployee : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_UpdateEmployee() {
+      ::grpc::Service::MarkMethodRawCallback(2,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->UpdateEmployee(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_UpdateEmployee() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status UpdateEmployee(::grpc::ServerContext* /*context*/, const ::api::UpdateEmployeeRequest* /*request*/, ::api::UpdateEmployeeResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* UpdateEmployee(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_GetEmployee : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_GetEmployee() {
+      ::grpc::Service::MarkMethodRawCallback(3,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetEmployee(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_GetEmployee() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetEmployee(::grpc::ServerContext* /*context*/, const ::api::GetEmployeeRequest* /*request*/, ::api::GetEmployeeResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* GetEmployee(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_GetEmployeeByKeyword : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_GetEmployeeByKeyword() {
+      ::grpc::Service::MarkMethodRawCallback(4,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetEmployeeByKeyword(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_GetEmployeeByKeyword() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetEmployeeByKeyword(::grpc::ServerContext* /*context*/, const ::api::GetEmployeeByKeywordRequest* /*request*/, ::api::GetEmployeeByKeywordResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* GetEmployeeByKeyword(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_StatisticByDepartment : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_StatisticByDepartment() {
+      ::grpc::Service::MarkMethodRawCallback(5,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->StatisticByDepartment(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_StatisticByDepartment() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status StatisticByDepartment(::grpc::ServerContext* /*context*/, const ::api::StatisticByDepartmentRequest* /*request*/, ::api::StatisticByDepartmentResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* StatisticByDepartment(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_StatisticByEducation : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_StatisticByEducation() {
+      ::grpc::Service::MarkMethodRawCallback(6,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->StatisticByEducation(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_StatisticByEducation() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status StatisticByEducation(::grpc::ServerContext* /*context*/, const ::api::StatisticByEducationRequest* /*request*/, ::api::StatisticByEducationResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* StatisticByEducation(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
   class WithRawCallbackMethod_Test : public BaseClass {
@@ -186,7 +1096,7 @@ class EmployeeService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_Test() {
-      ::grpc::Service::MarkMethodRawCallback(0,
+      ::grpc::Service::MarkMethodRawCallback(7,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Test(context, request, response); }));
@@ -203,12 +1113,201 @@ class EmployeeService final {
       ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
+  class WithStreamedUnaryMethod_AddEmployee : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithStreamedUnaryMethod_AddEmployee() {
+      ::grpc::Service::MarkMethodStreamed(0,
+        new ::grpc::internal::StreamedUnaryHandler<
+          ::api::AddEmployeeRequest, ::api::AddEmployeeResponse>(
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
+                     ::api::AddEmployeeRequest, ::api::AddEmployeeResponse>* streamer) {
+                       return this->StreamedAddEmployee(context,
+                         streamer);
+                  }));
+    }
+    ~WithStreamedUnaryMethod_AddEmployee() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status AddEmployee(::grpc::ServerContext* /*context*/, const ::api::AddEmployeeRequest* /*request*/, ::api::AddEmployeeResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedAddEmployee(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::api::AddEmployeeRequest,::api::AddEmployeeResponse>* server_unary_streamer) = 0;
+  };
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_DeleteEmployee : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithStreamedUnaryMethod_DeleteEmployee() {
+      ::grpc::Service::MarkMethodStreamed(1,
+        new ::grpc::internal::StreamedUnaryHandler<
+          ::api::DeleteEmployeeRequest, ::api::DeleteEmployeeResponse>(
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
+                     ::api::DeleteEmployeeRequest, ::api::DeleteEmployeeResponse>* streamer) {
+                       return this->StreamedDeleteEmployee(context,
+                         streamer);
+                  }));
+    }
+    ~WithStreamedUnaryMethod_DeleteEmployee() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status DeleteEmployee(::grpc::ServerContext* /*context*/, const ::api::DeleteEmployeeRequest* /*request*/, ::api::DeleteEmployeeResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedDeleteEmployee(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::api::DeleteEmployeeRequest,::api::DeleteEmployeeResponse>* server_unary_streamer) = 0;
+  };
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_UpdateEmployee : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithStreamedUnaryMethod_UpdateEmployee() {
+      ::grpc::Service::MarkMethodStreamed(2,
+        new ::grpc::internal::StreamedUnaryHandler<
+          ::api::UpdateEmployeeRequest, ::api::UpdateEmployeeResponse>(
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
+                     ::api::UpdateEmployeeRequest, ::api::UpdateEmployeeResponse>* streamer) {
+                       return this->StreamedUpdateEmployee(context,
+                         streamer);
+                  }));
+    }
+    ~WithStreamedUnaryMethod_UpdateEmployee() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status UpdateEmployee(::grpc::ServerContext* /*context*/, const ::api::UpdateEmployeeRequest* /*request*/, ::api::UpdateEmployeeResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedUpdateEmployee(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::api::UpdateEmployeeRequest,::api::UpdateEmployeeResponse>* server_unary_streamer) = 0;
+  };
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_GetEmployee : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithStreamedUnaryMethod_GetEmployee() {
+      ::grpc::Service::MarkMethodStreamed(3,
+        new ::grpc::internal::StreamedUnaryHandler<
+          ::api::GetEmployeeRequest, ::api::GetEmployeeResponse>(
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
+                     ::api::GetEmployeeRequest, ::api::GetEmployeeResponse>* streamer) {
+                       return this->StreamedGetEmployee(context,
+                         streamer);
+                  }));
+    }
+    ~WithStreamedUnaryMethod_GetEmployee() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status GetEmployee(::grpc::ServerContext* /*context*/, const ::api::GetEmployeeRequest* /*request*/, ::api::GetEmployeeResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedGetEmployee(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::api::GetEmployeeRequest,::api::GetEmployeeResponse>* server_unary_streamer) = 0;
+  };
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_GetEmployeeByKeyword : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithStreamedUnaryMethod_GetEmployeeByKeyword() {
+      ::grpc::Service::MarkMethodStreamed(4,
+        new ::grpc::internal::StreamedUnaryHandler<
+          ::api::GetEmployeeByKeywordRequest, ::api::GetEmployeeByKeywordResponse>(
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
+                     ::api::GetEmployeeByKeywordRequest, ::api::GetEmployeeByKeywordResponse>* streamer) {
+                       return this->StreamedGetEmployeeByKeyword(context,
+                         streamer);
+                  }));
+    }
+    ~WithStreamedUnaryMethod_GetEmployeeByKeyword() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status GetEmployeeByKeyword(::grpc::ServerContext* /*context*/, const ::api::GetEmployeeByKeywordRequest* /*request*/, ::api::GetEmployeeByKeywordResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedGetEmployeeByKeyword(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::api::GetEmployeeByKeywordRequest,::api::GetEmployeeByKeywordResponse>* server_unary_streamer) = 0;
+  };
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_StatisticByDepartment : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithStreamedUnaryMethod_StatisticByDepartment() {
+      ::grpc::Service::MarkMethodStreamed(5,
+        new ::grpc::internal::StreamedUnaryHandler<
+          ::api::StatisticByDepartmentRequest, ::api::StatisticByDepartmentResponse>(
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
+                     ::api::StatisticByDepartmentRequest, ::api::StatisticByDepartmentResponse>* streamer) {
+                       return this->StreamedStatisticByDepartment(context,
+                         streamer);
+                  }));
+    }
+    ~WithStreamedUnaryMethod_StatisticByDepartment() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status StatisticByDepartment(::grpc::ServerContext* /*context*/, const ::api::StatisticByDepartmentRequest* /*request*/, ::api::StatisticByDepartmentResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedStatisticByDepartment(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::api::StatisticByDepartmentRequest,::api::StatisticByDepartmentResponse>* server_unary_streamer) = 0;
+  };
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_StatisticByEducation : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithStreamedUnaryMethod_StatisticByEducation() {
+      ::grpc::Service::MarkMethodStreamed(6,
+        new ::grpc::internal::StreamedUnaryHandler<
+          ::api::StatisticByEducationRequest, ::api::StatisticByEducationResponse>(
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
+                     ::api::StatisticByEducationRequest, ::api::StatisticByEducationResponse>* streamer) {
+                       return this->StreamedStatisticByEducation(context,
+                         streamer);
+                  }));
+    }
+    ~WithStreamedUnaryMethod_StatisticByEducation() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status StatisticByEducation(::grpc::ServerContext* /*context*/, const ::api::StatisticByEducationRequest* /*request*/, ::api::StatisticByEducationResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedStatisticByEducation(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::api::StatisticByEducationRequest,::api::StatisticByEducationResponse>* server_unary_streamer) = 0;
+  };
+  template <class BaseClass>
   class WithStreamedUnaryMethod_Test : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_Test() {
-      ::grpc::Service::MarkMethodStreamed(0,
+      ::grpc::Service::MarkMethodStreamed(7,
         new ::grpc::internal::StreamedUnaryHandler<
           ::api::TestRequest, ::api::TestResponse>(
             [this](::grpc::ServerContext* context,
@@ -229,9 +1328,9 @@ class EmployeeService final {
     // replace default version of method with streamed unary
     virtual ::grpc::Status StreamedTest(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::api::TestRequest,::api::TestResponse>* server_unary_streamer) = 0;
   };
-  typedef WithStreamedUnaryMethod_Test<Service > StreamedUnaryService;
+  typedef WithStreamedUnaryMethod_AddEmployee<WithStreamedUnaryMethod_DeleteEmployee<WithStreamedUnaryMethod_UpdateEmployee<WithStreamedUnaryMethod_GetEmployee<WithStreamedUnaryMethod_GetEmployeeByKeyword<WithStreamedUnaryMethod_StatisticByDepartment<WithStreamedUnaryMethod_StatisticByEducation<WithStreamedUnaryMethod_Test<Service > > > > > > > > StreamedUnaryService;
   typedef Service SplitStreamedService;
-  typedef WithStreamedUnaryMethod_Test<Service > StreamedService;
+  typedef WithStreamedUnaryMethod_AddEmployee<WithStreamedUnaryMethod_DeleteEmployee<WithStreamedUnaryMethod_UpdateEmployee<WithStreamedUnaryMethod_GetEmployee<WithStreamedUnaryMethod_GetEmployeeByKeyword<WithStreamedUnaryMethod_StatisticByDepartment<WithStreamedUnaryMethod_StatisticByEducation<WithStreamedUnaryMethod_Test<Service > > > > > > > > StreamedService;
 };
 
 }  // namespace api

@@ -21,6 +21,246 @@ namespace _pb = ::PROTOBUF_NAMESPACE_ID;
 namespace _pbi = _pb::internal;
 
 namespace api {
+PROTOBUF_CONSTEXPR Employee::Employee(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.id_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.phone_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.college_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.department_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.education_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct EmployeeDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR EmployeeDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~EmployeeDefaultTypeInternal() {}
+  union {
+    Employee _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 EmployeeDefaultTypeInternal _Employee_default_instance_;
+PROTOBUF_CONSTEXPR DepartmentStatistic::DepartmentStatistic(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.department_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.bachelor_)*/0
+  , /*decltype(_impl_.master_)*/0
+  , /*decltype(_impl_.doctor_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct DepartmentStatisticDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR DepartmentStatisticDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~DepartmentStatisticDefaultTypeInternal() {}
+  union {
+    DepartmentStatistic _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 DepartmentStatisticDefaultTypeInternal _DepartmentStatistic_default_instance_;
+PROTOBUF_CONSTEXPR EducationStatistic::EducationStatistic(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.bachelor_)*/0
+  , /*decltype(_impl_.master_)*/0
+  , /*decltype(_impl_.doctor_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct EducationStatisticDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR EducationStatisticDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~EducationStatisticDefaultTypeInternal() {}
+  union {
+    EducationStatistic _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 EducationStatisticDefaultTypeInternal _EducationStatistic_default_instance_;
+PROTOBUF_CONSTEXPR EmployeeList::EmployeeList(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.empolyee_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct EmployeeListDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR EmployeeListDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~EmployeeListDefaultTypeInternal() {}
+  union {
+    EmployeeList _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 EmployeeListDefaultTypeInternal _EmployeeList_default_instance_;
+PROTOBUF_CONSTEXPR AddEmployeeRequest::AddEmployeeRequest(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.empolyee_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct AddEmployeeRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR AddEmployeeRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~AddEmployeeRequestDefaultTypeInternal() {}
+  union {
+    AddEmployeeRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 AddEmployeeRequestDefaultTypeInternal _AddEmployeeRequest_default_instance_;
+PROTOBUF_CONSTEXPR AddEmployeeResponse::AddEmployeeResponse(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.res_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct AddEmployeeResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR AddEmployeeResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~AddEmployeeResponseDefaultTypeInternal() {}
+  union {
+    AddEmployeeResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 AddEmployeeResponseDefaultTypeInternal _AddEmployeeResponse_default_instance_;
+PROTOBUF_CONSTEXPR DeleteEmployeeRequest::DeleteEmployeeRequest(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.id_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct DeleteEmployeeRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR DeleteEmployeeRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~DeleteEmployeeRequestDefaultTypeInternal() {}
+  union {
+    DeleteEmployeeRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 DeleteEmployeeRequestDefaultTypeInternal _DeleteEmployeeRequest_default_instance_;
+PROTOBUF_CONSTEXPR DeleteEmployeeResponse::DeleteEmployeeResponse(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.res_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct DeleteEmployeeResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR DeleteEmployeeResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~DeleteEmployeeResponseDefaultTypeInternal() {}
+  union {
+    DeleteEmployeeResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 DeleteEmployeeResponseDefaultTypeInternal _DeleteEmployeeResponse_default_instance_;
+PROTOBUF_CONSTEXPR UpdateEmployeeRequest::UpdateEmployeeRequest(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.empolyee_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct UpdateEmployeeRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR UpdateEmployeeRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~UpdateEmployeeRequestDefaultTypeInternal() {}
+  union {
+    UpdateEmployeeRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 UpdateEmployeeRequestDefaultTypeInternal _UpdateEmployeeRequest_default_instance_;
+PROTOBUF_CONSTEXPR UpdateEmployeeResponse::UpdateEmployeeResponse(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.res_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct UpdateEmployeeResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR UpdateEmployeeResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~UpdateEmployeeResponseDefaultTypeInternal() {}
+  union {
+    UpdateEmployeeResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 UpdateEmployeeResponseDefaultTypeInternal _UpdateEmployeeResponse_default_instance_;
+PROTOBUF_CONSTEXPR GetEmployeeRequest::GetEmployeeRequest(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.id_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct GetEmployeeRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetEmployeeRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GetEmployeeRequestDefaultTypeInternal() {}
+  union {
+    GetEmployeeRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetEmployeeRequestDefaultTypeInternal _GetEmployeeRequest_default_instance_;
+PROTOBUF_CONSTEXPR GetEmployeeResponse::GetEmployeeResponse(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.empolyee_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct GetEmployeeResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetEmployeeResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GetEmployeeResponseDefaultTypeInternal() {}
+  union {
+    GetEmployeeResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetEmployeeResponseDefaultTypeInternal _GetEmployeeResponse_default_instance_;
+PROTOBUF_CONSTEXPR GetEmployeeByKeywordRequest::GetEmployeeByKeywordRequest(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.keyword_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct GetEmployeeByKeywordRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetEmployeeByKeywordRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GetEmployeeByKeywordRequestDefaultTypeInternal() {}
+  union {
+    GetEmployeeByKeywordRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetEmployeeByKeywordRequestDefaultTypeInternal _GetEmployeeByKeywordRequest_default_instance_;
+PROTOBUF_CONSTEXPR GetEmployeeByKeywordResponse::GetEmployeeByKeywordResponse(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.empolyeelist_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct GetEmployeeByKeywordResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetEmployeeByKeywordResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GetEmployeeByKeywordResponseDefaultTypeInternal() {}
+  union {
+    GetEmployeeByKeywordResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetEmployeeByKeywordResponseDefaultTypeInternal _GetEmployeeByKeywordResponse_default_instance_;
+PROTOBUF_CONSTEXPR StatisticByDepartmentRequest::StatisticByDepartmentRequest(
+    ::_pbi::ConstantInitialized) {}
+struct StatisticByDepartmentRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR StatisticByDepartmentRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~StatisticByDepartmentRequestDefaultTypeInternal() {}
+  union {
+    StatisticByDepartmentRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 StatisticByDepartmentRequestDefaultTypeInternal _StatisticByDepartmentRequest_default_instance_;
+PROTOBUF_CONSTEXPR StatisticByDepartmentResponse::StatisticByDepartmentResponse(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.departmentstatistic_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct StatisticByDepartmentResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR StatisticByDepartmentResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~StatisticByDepartmentResponseDefaultTypeInternal() {}
+  union {
+    StatisticByDepartmentResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 StatisticByDepartmentResponseDefaultTypeInternal _StatisticByDepartmentResponse_default_instance_;
+PROTOBUF_CONSTEXPR StatisticByEducationRequest::StatisticByEducationRequest(
+    ::_pbi::ConstantInitialized) {}
+struct StatisticByEducationRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR StatisticByEducationRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~StatisticByEducationRequestDefaultTypeInternal() {}
+  union {
+    StatisticByEducationRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 StatisticByEducationRequestDefaultTypeInternal _StatisticByEducationRequest_default_instance_;
+PROTOBUF_CONSTEXPR StatisticByEducationResponse::StatisticByEducationResponse(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.educationstatistic_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct StatisticByEducationResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR StatisticByEducationResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~StatisticByEducationResponseDefaultTypeInternal() {}
+  union {
+    StatisticByEducationResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 StatisticByEducationResponseDefaultTypeInternal _StatisticByEducationResponse_default_instance_;
 PROTOBUF_CONSTEXPR TestRequest::TestRequest(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.request_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
@@ -48,11 +288,145 @@ struct TestResponseDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 TestResponseDefaultTypeInternal _TestResponse_default_instance_;
 }  // namespace api
-static ::_pb::Metadata file_level_metadata_api_2eproto[2];
+static ::_pb::Metadata file_level_metadata_api_2eproto[20];
 static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_api_2eproto = nullptr;
 static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_api_2eproto = nullptr;
 
 const uint32_t TableStruct_api_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::api::Employee, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::api::Employee, _impl_.name_),
+  PROTOBUF_FIELD_OFFSET(::api::Employee, _impl_.id_),
+  PROTOBUF_FIELD_OFFSET(::api::Employee, _impl_.phone_),
+  PROTOBUF_FIELD_OFFSET(::api::Employee, _impl_.college_),
+  PROTOBUF_FIELD_OFFSET(::api::Employee, _impl_.department_),
+  PROTOBUF_FIELD_OFFSET(::api::Employee, _impl_.education_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::api::DepartmentStatistic, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::api::DepartmentStatistic, _impl_.department_),
+  PROTOBUF_FIELD_OFFSET(::api::DepartmentStatistic, _impl_.bachelor_),
+  PROTOBUF_FIELD_OFFSET(::api::DepartmentStatistic, _impl_.master_),
+  PROTOBUF_FIELD_OFFSET(::api::DepartmentStatistic, _impl_.doctor_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::api::EducationStatistic, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::api::EducationStatistic, _impl_.bachelor_),
+  PROTOBUF_FIELD_OFFSET(::api::EducationStatistic, _impl_.master_),
+  PROTOBUF_FIELD_OFFSET(::api::EducationStatistic, _impl_.doctor_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::api::EmployeeList, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::api::EmployeeList, _impl_.empolyee_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::api::AddEmployeeRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::api::AddEmployeeRequest, _impl_.empolyee_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::api::AddEmployeeResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::api::AddEmployeeResponse, _impl_.res_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::api::DeleteEmployeeRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::api::DeleteEmployeeRequest, _impl_.id_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::api::DeleteEmployeeResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::api::DeleteEmployeeResponse, _impl_.res_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::api::UpdateEmployeeRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::api::UpdateEmployeeRequest, _impl_.empolyee_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::api::UpdateEmployeeResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::api::UpdateEmployeeResponse, _impl_.res_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::api::GetEmployeeRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::api::GetEmployeeRequest, _impl_.id_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::api::GetEmployeeResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::api::GetEmployeeResponse, _impl_.empolyee_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::api::GetEmployeeByKeywordRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::api::GetEmployeeByKeywordRequest, _impl_.keyword_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::api::GetEmployeeByKeywordResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::api::GetEmployeeByKeywordResponse, _impl_.empolyeelist_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::api::StatisticByDepartmentRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::api::StatisticByDepartmentResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::api::StatisticByDepartmentResponse, _impl_.departmentstatistic_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::api::StatisticByEducationRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::api::StatisticByEducationResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::api::StatisticByEducationResponse, _impl_.educationstatistic_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::api::TestRequest, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -69,26 +443,102 @@ const uint32_t TableStruct_api_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(prot
   PROTOBUF_FIELD_OFFSET(::api::TestResponse, _impl_.response_),
 };
 static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::api::TestRequest)},
-  { 7, -1, -1, sizeof(::api::TestResponse)},
+  { 0, -1, -1, sizeof(::api::Employee)},
+  { 12, -1, -1, sizeof(::api::DepartmentStatistic)},
+  { 22, -1, -1, sizeof(::api::EducationStatistic)},
+  { 31, -1, -1, sizeof(::api::EmployeeList)},
+  { 38, -1, -1, sizeof(::api::AddEmployeeRequest)},
+  { 45, -1, -1, sizeof(::api::AddEmployeeResponse)},
+  { 52, -1, -1, sizeof(::api::DeleteEmployeeRequest)},
+  { 59, -1, -1, sizeof(::api::DeleteEmployeeResponse)},
+  { 66, -1, -1, sizeof(::api::UpdateEmployeeRequest)},
+  { 73, -1, -1, sizeof(::api::UpdateEmployeeResponse)},
+  { 80, -1, -1, sizeof(::api::GetEmployeeRequest)},
+  { 87, -1, -1, sizeof(::api::GetEmployeeResponse)},
+  { 94, -1, -1, sizeof(::api::GetEmployeeByKeywordRequest)},
+  { 101, -1, -1, sizeof(::api::GetEmployeeByKeywordResponse)},
+  { 108, -1, -1, sizeof(::api::StatisticByDepartmentRequest)},
+  { 114, -1, -1, sizeof(::api::StatisticByDepartmentResponse)},
+  { 121, -1, -1, sizeof(::api::StatisticByEducationRequest)},
+  { 127, -1, -1, sizeof(::api::StatisticByEducationResponse)},
+  { 134, -1, -1, sizeof(::api::TestRequest)},
+  { 141, -1, -1, sizeof(::api::TestResponse)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
+  &::api::_Employee_default_instance_._instance,
+  &::api::_DepartmentStatistic_default_instance_._instance,
+  &::api::_EducationStatistic_default_instance_._instance,
+  &::api::_EmployeeList_default_instance_._instance,
+  &::api::_AddEmployeeRequest_default_instance_._instance,
+  &::api::_AddEmployeeResponse_default_instance_._instance,
+  &::api::_DeleteEmployeeRequest_default_instance_._instance,
+  &::api::_DeleteEmployeeResponse_default_instance_._instance,
+  &::api::_UpdateEmployeeRequest_default_instance_._instance,
+  &::api::_UpdateEmployeeResponse_default_instance_._instance,
+  &::api::_GetEmployeeRequest_default_instance_._instance,
+  &::api::_GetEmployeeResponse_default_instance_._instance,
+  &::api::_GetEmployeeByKeywordRequest_default_instance_._instance,
+  &::api::_GetEmployeeByKeywordResponse_default_instance_._instance,
+  &::api::_StatisticByDepartmentRequest_default_instance_._instance,
+  &::api::_StatisticByDepartmentResponse_default_instance_._instance,
+  &::api::_StatisticByEducationRequest_default_instance_._instance,
+  &::api::_StatisticByEducationResponse_default_instance_._instance,
   &::api::_TestRequest_default_instance_._instance,
   &::api::_TestResponse_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_api_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\tapi.proto\022\003api\"\036\n\013TestRequest\022\017\n\007reque"
-  "st\030\001 \001(\t\" \n\014TestResponse\022\020\n\010response\030\001 \001"
-  "(\t2>\n\017EmployeeService\022+\n\004Test\022\020.api.Test"
-  "Request\032\021.api.TestResponseb\006proto3"
+  "\n\tapi.proto\022\003api\"k\n\010Employee\022\014\n\004name\030\001 \001"
+  "(\t\022\n\n\002id\030\002 \001(\t\022\r\n\005phone\030\003 \001(\t\022\017\n\007college"
+  "\030\004 \001(\t\022\022\n\ndepartment\030\005 \001(\t\022\021\n\teducation\030"
+  "\006 \001(\005\"[\n\023DepartmentStatistic\022\022\n\ndepartme"
+  "nt\030\001 \001(\t\022\020\n\010bachelor\030\002 \001(\005\022\016\n\006master\030\003 \001"
+  "(\005\022\016\n\006doctor\030\004 \001(\005\"F\n\022EducationStatistic"
+  "\022\020\n\010bachelor\030\001 \001(\005\022\016\n\006master\030\002 \001(\005\022\016\n\006do"
+  "ctor\030\003 \001(\005\"/\n\014EmployeeList\022\037\n\010empolyee\030\001"
+  " \003(\0132\r.api.Employee\"5\n\022AddEmployeeReques"
+  "t\022\037\n\010empolyee\030\001 \001(\0132\r.api.Employee\"\"\n\023Ad"
+  "dEmployeeResponse\022\013\n\003res\030\001 \001(\005\"#\n\025Delete"
+  "EmployeeRequest\022\n\n\002id\030\001 \001(\t\"%\n\026DeleteEmp"
+  "loyeeResponse\022\013\n\003res\030\001 \001(\005\"8\n\025UpdateEmpl"
+  "oyeeRequest\022\037\n\010empolyee\030\001 \001(\0132\r.api.Empl"
+  "oyee\"%\n\026UpdateEmployeeResponse\022\013\n\003res\030\001 "
+  "\001(\005\" \n\022GetEmployeeRequest\022\n\n\002id\030\001 \001(\t\"6\n"
+  "\023GetEmployeeResponse\022\037\n\010empolyee\030\001 \001(\0132\r"
+  ".api.Employee\".\n\033GetEmployeeByKeywordReq"
+  "uest\022\017\n\007keyword\030\001 \001(\t\"G\n\034GetEmployeeByKe"
+  "ywordResponse\022\'\n\014empolyeeList\030\001 \001(\0132\021.ap"
+  "i.EmployeeList\"\036\n\034StatisticByDepartmentR"
+  "equest\"V\n\035StatisticByDepartmentResponse\022"
+  "5\n\023departmentStatistic\030\001 \003(\0132\030.api.Depar"
+  "tmentStatistic\"\035\n\033StatisticByEducationRe"
+  "quest\"S\n\034StatisticByEducationResponse\0223\n"
+  "\022educationStatistic\030\001 \001(\0132\027.api.Educatio"
+  "nStatistic\"\036\n\013TestRequest\022\017\n\007request\030\001 \001"
+  "(\t\" \n\014TestResponse\022\020\n\010response\030\001 \001(\t2\362\004\n"
+  "\017EmployeeService\022@\n\013AddEmployee\022\027.api.Ad"
+  "dEmployeeRequest\032\030.api.AddEmployeeRespon"
+  "se\022I\n\016DeleteEmployee\022\032.api.DeleteEmploye"
+  "eRequest\032\033.api.DeleteEmployeeResponse\022I\n"
+  "\016UpdateEmployee\022\032.api.UpdateEmployeeRequ"
+  "est\032\033.api.UpdateEmployeeResponse\022@\n\013GetE"
+  "mployee\022\027.api.GetEmployeeRequest\032\030.api.G"
+  "etEmployeeResponse\022[\n\024GetEmployeeByKeywo"
+  "rd\022 .api.GetEmployeeByKeywordRequest\032!.a"
+  "pi.GetEmployeeByKeywordResponse\022^\n\025Stati"
+  "sticByDepartment\022!.api.StatisticByDepart"
+  "mentRequest\032\".api.StatisticByDepartmentR"
+  "esponse\022[\n\024StatisticByEducation\022 .api.St"
+  "atisticByEducationRequest\032!.api.Statisti"
+  "cByEducationResponse\022+\n\004Test\022\020.api.TestR"
+  "equest\032\021.api.TestResponseb\006proto3"
   ;
 static ::_pbi::once_flag descriptor_table_api_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_api_2eproto = {
-    false, false, 154, descriptor_table_protodef_api_2eproto,
+    false, false, 1753, descriptor_table_protodef_api_2eproto,
     "api.proto",
-    &descriptor_table_api_2eproto_once, nullptr, 0, 2,
+    &descriptor_table_api_2eproto_once, nullptr, 0, 20,
     schemas, file_default_instances, TableStruct_api_2eproto::offsets,
     file_level_metadata_api_2eproto, file_level_enum_descriptors_api_2eproto,
     file_level_service_descriptors_api_2eproto,
@@ -100,6 +550,3516 @@ PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_api_2epr
 // Force running AddDescriptors() at dynamic initialization time.
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_api_2eproto(&descriptor_table_api_2eproto);
 namespace api {
+
+// ===================================================================
+
+class Employee::_Internal {
+ public:
+};
+
+Employee::Employee(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:api.Employee)
+}
+Employee::Employee(const Employee& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  Employee* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.name_){}
+    , decltype(_impl_.id_){}
+    , decltype(_impl_.phone_){}
+    , decltype(_impl_.college_){}
+    , decltype(_impl_.department_){}
+    , decltype(_impl_.education_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.name_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.name_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_name().empty()) {
+    _this->_impl_.name_.Set(from._internal_name(), 
+      _this->GetArenaForAllocation());
+  }
+  _impl_.id_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.id_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_id().empty()) {
+    _this->_impl_.id_.Set(from._internal_id(), 
+      _this->GetArenaForAllocation());
+  }
+  _impl_.phone_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.phone_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_phone().empty()) {
+    _this->_impl_.phone_.Set(from._internal_phone(), 
+      _this->GetArenaForAllocation());
+  }
+  _impl_.college_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.college_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_college().empty()) {
+    _this->_impl_.college_.Set(from._internal_college(), 
+      _this->GetArenaForAllocation());
+  }
+  _impl_.department_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.department_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_department().empty()) {
+    _this->_impl_.department_.Set(from._internal_department(), 
+      _this->GetArenaForAllocation());
+  }
+  _this->_impl_.education_ = from._impl_.education_;
+  // @@protoc_insertion_point(copy_constructor:api.Employee)
+}
+
+inline void Employee::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.name_){}
+    , decltype(_impl_.id_){}
+    , decltype(_impl_.phone_){}
+    , decltype(_impl_.college_){}
+    , decltype(_impl_.department_){}
+    , decltype(_impl_.education_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.name_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.name_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.id_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.id_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.phone_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.phone_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.college_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.college_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.department_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.department_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+}
+
+Employee::~Employee() {
+  // @@protoc_insertion_point(destructor:api.Employee)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void Employee::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.name_.Destroy();
+  _impl_.id_.Destroy();
+  _impl_.phone_.Destroy();
+  _impl_.college_.Destroy();
+  _impl_.department_.Destroy();
+}
+
+void Employee::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void Employee::Clear() {
+// @@protoc_insertion_point(message_clear_start:api.Employee)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.name_.ClearToEmpty();
+  _impl_.id_.ClearToEmpty();
+  _impl_.phone_.ClearToEmpty();
+  _impl_.college_.ClearToEmpty();
+  _impl_.department_.ClearToEmpty();
+  _impl_.education_ = 0;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* Employee::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // string name = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          auto str = _internal_mutable_name();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "api.Employee.name"));
+        } else
+          goto handle_unusual;
+        continue;
+      // string id = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          auto str = _internal_mutable_id();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "api.Employee.id"));
+        } else
+          goto handle_unusual;
+        continue;
+      // string phone = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          auto str = _internal_mutable_phone();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "api.Employee.phone"));
+        } else
+          goto handle_unusual;
+        continue;
+      // string college = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
+          auto str = _internal_mutable_college();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "api.Employee.college"));
+        } else
+          goto handle_unusual;
+        continue;
+      // string department = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
+          auto str = _internal_mutable_department();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "api.Employee.department"));
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 education = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
+          _impl_.education_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* Employee::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:api.Employee)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string name = 1;
+  if (!this->_internal_name().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "api.Employee.name");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_name(), target);
+  }
+
+  // string id = 2;
+  if (!this->_internal_id().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_id().data(), static_cast<int>(this->_internal_id().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "api.Employee.id");
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_id(), target);
+  }
+
+  // string phone = 3;
+  if (!this->_internal_phone().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_phone().data(), static_cast<int>(this->_internal_phone().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "api.Employee.phone");
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_phone(), target);
+  }
+
+  // string college = 4;
+  if (!this->_internal_college().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_college().data(), static_cast<int>(this->_internal_college().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "api.Employee.college");
+    target = stream->WriteStringMaybeAliased(
+        4, this->_internal_college(), target);
+  }
+
+  // string department = 5;
+  if (!this->_internal_department().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_department().data(), static_cast<int>(this->_internal_department().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "api.Employee.department");
+    target = stream->WriteStringMaybeAliased(
+        5, this->_internal_department(), target);
+  }
+
+  // int32 education = 6;
+  if (this->_internal_education() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(6, this->_internal_education(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:api.Employee)
+  return target;
+}
+
+size_t Employee::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:api.Employee)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string name = 1;
+  if (!this->_internal_name().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_name());
+  }
+
+  // string id = 2;
+  if (!this->_internal_id().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_id());
+  }
+
+  // string phone = 3;
+  if (!this->_internal_phone().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_phone());
+  }
+
+  // string college = 4;
+  if (!this->_internal_college().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_college());
+  }
+
+  // string department = 5;
+  if (!this->_internal_department().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_department());
+  }
+
+  // int32 education = 6;
+  if (this->_internal_education() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_education());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Employee::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Employee::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Employee::GetClassData() const { return &_class_data_; }
+
+
+void Employee::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Employee*>(&to_msg);
+  auto& from = static_cast<const Employee&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:api.Employee)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_name().empty()) {
+    _this->_internal_set_name(from._internal_name());
+  }
+  if (!from._internal_id().empty()) {
+    _this->_internal_set_id(from._internal_id());
+  }
+  if (!from._internal_phone().empty()) {
+    _this->_internal_set_phone(from._internal_phone());
+  }
+  if (!from._internal_college().empty()) {
+    _this->_internal_set_college(from._internal_college());
+  }
+  if (!from._internal_department().empty()) {
+    _this->_internal_set_department(from._internal_department());
+  }
+  if (from._internal_education() != 0) {
+    _this->_internal_set_education(from._internal_education());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void Employee::CopyFrom(const Employee& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:api.Employee)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Employee::IsInitialized() const {
+  return true;
+}
+
+void Employee::InternalSwap(Employee* other) {
+  using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.name_, lhs_arena,
+      &other->_impl_.name_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.id_, lhs_arena,
+      &other->_impl_.id_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.phone_, lhs_arena,
+      &other->_impl_.phone_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.college_, lhs_arena,
+      &other->_impl_.college_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.department_, lhs_arena,
+      &other->_impl_.department_, rhs_arena
+  );
+  swap(_impl_.education_, other->_impl_.education_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata Employee::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_api_2eproto_getter, &descriptor_table_api_2eproto_once,
+      file_level_metadata_api_2eproto[0]);
+}
+
+// ===================================================================
+
+class DepartmentStatistic::_Internal {
+ public:
+};
+
+DepartmentStatistic::DepartmentStatistic(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:api.DepartmentStatistic)
+}
+DepartmentStatistic::DepartmentStatistic(const DepartmentStatistic& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  DepartmentStatistic* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.department_){}
+    , decltype(_impl_.bachelor_){}
+    , decltype(_impl_.master_){}
+    , decltype(_impl_.doctor_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.department_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.department_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_department().empty()) {
+    _this->_impl_.department_.Set(from._internal_department(), 
+      _this->GetArenaForAllocation());
+  }
+  ::memcpy(&_impl_.bachelor_, &from._impl_.bachelor_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.doctor_) -
+    reinterpret_cast<char*>(&_impl_.bachelor_)) + sizeof(_impl_.doctor_));
+  // @@protoc_insertion_point(copy_constructor:api.DepartmentStatistic)
+}
+
+inline void DepartmentStatistic::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.department_){}
+    , decltype(_impl_.bachelor_){0}
+    , decltype(_impl_.master_){0}
+    , decltype(_impl_.doctor_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.department_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.department_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+}
+
+DepartmentStatistic::~DepartmentStatistic() {
+  // @@protoc_insertion_point(destructor:api.DepartmentStatistic)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void DepartmentStatistic::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.department_.Destroy();
+}
+
+void DepartmentStatistic::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void DepartmentStatistic::Clear() {
+// @@protoc_insertion_point(message_clear_start:api.DepartmentStatistic)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.department_.ClearToEmpty();
+  ::memset(&_impl_.bachelor_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.doctor_) -
+      reinterpret_cast<char*>(&_impl_.bachelor_)) + sizeof(_impl_.doctor_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* DepartmentStatistic::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // string department = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          auto str = _internal_mutable_department();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "api.DepartmentStatistic.department"));
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 bachelor = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _impl_.bachelor_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 master = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _impl_.master_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 doctor = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _impl_.doctor_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* DepartmentStatistic::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:api.DepartmentStatistic)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string department = 1;
+  if (!this->_internal_department().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_department().data(), static_cast<int>(this->_internal_department().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "api.DepartmentStatistic.department");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_department(), target);
+  }
+
+  // int32 bachelor = 2;
+  if (this->_internal_bachelor() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_bachelor(), target);
+  }
+
+  // int32 master = 3;
+  if (this->_internal_master() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_master(), target);
+  }
+
+  // int32 doctor = 4;
+  if (this->_internal_doctor() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(4, this->_internal_doctor(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:api.DepartmentStatistic)
+  return target;
+}
+
+size_t DepartmentStatistic::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:api.DepartmentStatistic)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string department = 1;
+  if (!this->_internal_department().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_department());
+  }
+
+  // int32 bachelor = 2;
+  if (this->_internal_bachelor() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_bachelor());
+  }
+
+  // int32 master = 3;
+  if (this->_internal_master() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_master());
+  }
+
+  // int32 doctor = 4;
+  if (this->_internal_doctor() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_doctor());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData DepartmentStatistic::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    DepartmentStatistic::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*DepartmentStatistic::GetClassData() const { return &_class_data_; }
+
+
+void DepartmentStatistic::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<DepartmentStatistic*>(&to_msg);
+  auto& from = static_cast<const DepartmentStatistic&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:api.DepartmentStatistic)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_department().empty()) {
+    _this->_internal_set_department(from._internal_department());
+  }
+  if (from._internal_bachelor() != 0) {
+    _this->_internal_set_bachelor(from._internal_bachelor());
+  }
+  if (from._internal_master() != 0) {
+    _this->_internal_set_master(from._internal_master());
+  }
+  if (from._internal_doctor() != 0) {
+    _this->_internal_set_doctor(from._internal_doctor());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void DepartmentStatistic::CopyFrom(const DepartmentStatistic& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:api.DepartmentStatistic)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool DepartmentStatistic::IsInitialized() const {
+  return true;
+}
+
+void DepartmentStatistic::InternalSwap(DepartmentStatistic* other) {
+  using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.department_, lhs_arena,
+      &other->_impl_.department_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(DepartmentStatistic, _impl_.doctor_)
+      + sizeof(DepartmentStatistic::_impl_.doctor_)
+      - PROTOBUF_FIELD_OFFSET(DepartmentStatistic, _impl_.bachelor_)>(
+          reinterpret_cast<char*>(&_impl_.bachelor_),
+          reinterpret_cast<char*>(&other->_impl_.bachelor_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata DepartmentStatistic::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_api_2eproto_getter, &descriptor_table_api_2eproto_once,
+      file_level_metadata_api_2eproto[1]);
+}
+
+// ===================================================================
+
+class EducationStatistic::_Internal {
+ public:
+};
+
+EducationStatistic::EducationStatistic(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:api.EducationStatistic)
+}
+EducationStatistic::EducationStatistic(const EducationStatistic& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  EducationStatistic* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.bachelor_){}
+    , decltype(_impl_.master_){}
+    , decltype(_impl_.doctor_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&_impl_.bachelor_, &from._impl_.bachelor_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.doctor_) -
+    reinterpret_cast<char*>(&_impl_.bachelor_)) + sizeof(_impl_.doctor_));
+  // @@protoc_insertion_point(copy_constructor:api.EducationStatistic)
+}
+
+inline void EducationStatistic::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.bachelor_){0}
+    , decltype(_impl_.master_){0}
+    , decltype(_impl_.doctor_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+EducationStatistic::~EducationStatistic() {
+  // @@protoc_insertion_point(destructor:api.EducationStatistic)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void EducationStatistic::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void EducationStatistic::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void EducationStatistic::Clear() {
+// @@protoc_insertion_point(message_clear_start:api.EducationStatistic)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  ::memset(&_impl_.bachelor_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.doctor_) -
+      reinterpret_cast<char*>(&_impl_.bachelor_)) + sizeof(_impl_.doctor_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* EducationStatistic::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // int32 bachelor = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.bachelor_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 master = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _impl_.master_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 doctor = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _impl_.doctor_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* EducationStatistic::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:api.EducationStatistic)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 bachelor = 1;
+  if (this->_internal_bachelor() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_bachelor(), target);
+  }
+
+  // int32 master = 2;
+  if (this->_internal_master() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_master(), target);
+  }
+
+  // int32 doctor = 3;
+  if (this->_internal_doctor() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_doctor(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:api.EducationStatistic)
+  return target;
+}
+
+size_t EducationStatistic::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:api.EducationStatistic)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // int32 bachelor = 1;
+  if (this->_internal_bachelor() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_bachelor());
+  }
+
+  // int32 master = 2;
+  if (this->_internal_master() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_master());
+  }
+
+  // int32 doctor = 3;
+  if (this->_internal_doctor() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_doctor());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData EducationStatistic::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    EducationStatistic::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*EducationStatistic::GetClassData() const { return &_class_data_; }
+
+
+void EducationStatistic::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<EducationStatistic*>(&to_msg);
+  auto& from = static_cast<const EducationStatistic&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:api.EducationStatistic)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_bachelor() != 0) {
+    _this->_internal_set_bachelor(from._internal_bachelor());
+  }
+  if (from._internal_master() != 0) {
+    _this->_internal_set_master(from._internal_master());
+  }
+  if (from._internal_doctor() != 0) {
+    _this->_internal_set_doctor(from._internal_doctor());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void EducationStatistic::CopyFrom(const EducationStatistic& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:api.EducationStatistic)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool EducationStatistic::IsInitialized() const {
+  return true;
+}
+
+void EducationStatistic::InternalSwap(EducationStatistic* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(EducationStatistic, _impl_.doctor_)
+      + sizeof(EducationStatistic::_impl_.doctor_)
+      - PROTOBUF_FIELD_OFFSET(EducationStatistic, _impl_.bachelor_)>(
+          reinterpret_cast<char*>(&_impl_.bachelor_),
+          reinterpret_cast<char*>(&other->_impl_.bachelor_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata EducationStatistic::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_api_2eproto_getter, &descriptor_table_api_2eproto_once,
+      file_level_metadata_api_2eproto[2]);
+}
+
+// ===================================================================
+
+class EmployeeList::_Internal {
+ public:
+};
+
+EmployeeList::EmployeeList(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:api.EmployeeList)
+}
+EmployeeList::EmployeeList(const EmployeeList& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  EmployeeList* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.empolyee_){from._impl_.empolyee_}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:api.EmployeeList)
+}
+
+inline void EmployeeList::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.empolyee_){arena}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+EmployeeList::~EmployeeList() {
+  // @@protoc_insertion_point(destructor:api.EmployeeList)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void EmployeeList::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.empolyee_.~RepeatedPtrField();
+}
+
+void EmployeeList::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void EmployeeList::Clear() {
+// @@protoc_insertion_point(message_clear_start:api.EmployeeList)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.empolyee_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* EmployeeList::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // repeated .api.Employee empolyee = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_empolyee(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* EmployeeList::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:api.EmployeeList)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated .api.Employee empolyee = 1;
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_empolyee_size()); i < n; i++) {
+    const auto& repfield = this->_internal_empolyee(i);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:api.EmployeeList)
+  return target;
+}
+
+size_t EmployeeList::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:api.EmployeeList)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated .api.Employee empolyee = 1;
+  total_size += 1UL * this->_internal_empolyee_size();
+  for (const auto& msg : this->_impl_.empolyee_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData EmployeeList::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    EmployeeList::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*EmployeeList::GetClassData() const { return &_class_data_; }
+
+
+void EmployeeList::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<EmployeeList*>(&to_msg);
+  auto& from = static_cast<const EmployeeList&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:api.EmployeeList)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_impl_.empolyee_.MergeFrom(from._impl_.empolyee_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void EmployeeList::CopyFrom(const EmployeeList& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:api.EmployeeList)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool EmployeeList::IsInitialized() const {
+  return true;
+}
+
+void EmployeeList::InternalSwap(EmployeeList* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.empolyee_.InternalSwap(&other->_impl_.empolyee_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata EmployeeList::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_api_2eproto_getter, &descriptor_table_api_2eproto_once,
+      file_level_metadata_api_2eproto[3]);
+}
+
+// ===================================================================
+
+class AddEmployeeRequest::_Internal {
+ public:
+  static const ::api::Employee& empolyee(const AddEmployeeRequest* msg);
+};
+
+const ::api::Employee&
+AddEmployeeRequest::_Internal::empolyee(const AddEmployeeRequest* msg) {
+  return *msg->_impl_.empolyee_;
+}
+AddEmployeeRequest::AddEmployeeRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:api.AddEmployeeRequest)
+}
+AddEmployeeRequest::AddEmployeeRequest(const AddEmployeeRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  AddEmployeeRequest* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.empolyee_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_empolyee()) {
+    _this->_impl_.empolyee_ = new ::api::Employee(*from._impl_.empolyee_);
+  }
+  // @@protoc_insertion_point(copy_constructor:api.AddEmployeeRequest)
+}
+
+inline void AddEmployeeRequest::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.empolyee_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+AddEmployeeRequest::~AddEmployeeRequest() {
+  // @@protoc_insertion_point(destructor:api.AddEmployeeRequest)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void AddEmployeeRequest::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.empolyee_;
+}
+
+void AddEmployeeRequest::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void AddEmployeeRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:api.AddEmployeeRequest)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.empolyee_ != nullptr) {
+    delete _impl_.empolyee_;
+  }
+  _impl_.empolyee_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* AddEmployeeRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .api.Employee empolyee = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_empolyee(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* AddEmployeeRequest::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:api.AddEmployeeRequest)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .api.Employee empolyee = 1;
+  if (this->_internal_has_empolyee()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::empolyee(this),
+        _Internal::empolyee(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:api.AddEmployeeRequest)
+  return target;
+}
+
+size_t AddEmployeeRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:api.AddEmployeeRequest)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .api.Employee empolyee = 1;
+  if (this->_internal_has_empolyee()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.empolyee_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData AddEmployeeRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    AddEmployeeRequest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*AddEmployeeRequest::GetClassData() const { return &_class_data_; }
+
+
+void AddEmployeeRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<AddEmployeeRequest*>(&to_msg);
+  auto& from = static_cast<const AddEmployeeRequest&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:api.AddEmployeeRequest)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_empolyee()) {
+    _this->_internal_mutable_empolyee()->::api::Employee::MergeFrom(
+        from._internal_empolyee());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void AddEmployeeRequest::CopyFrom(const AddEmployeeRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:api.AddEmployeeRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool AddEmployeeRequest::IsInitialized() const {
+  return true;
+}
+
+void AddEmployeeRequest::InternalSwap(AddEmployeeRequest* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.empolyee_, other->_impl_.empolyee_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata AddEmployeeRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_api_2eproto_getter, &descriptor_table_api_2eproto_once,
+      file_level_metadata_api_2eproto[4]);
+}
+
+// ===================================================================
+
+class AddEmployeeResponse::_Internal {
+ public:
+};
+
+AddEmployeeResponse::AddEmployeeResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:api.AddEmployeeResponse)
+}
+AddEmployeeResponse::AddEmployeeResponse(const AddEmployeeResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  AddEmployeeResponse* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.res_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_impl_.res_ = from._impl_.res_;
+  // @@protoc_insertion_point(copy_constructor:api.AddEmployeeResponse)
+}
+
+inline void AddEmployeeResponse::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.res_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+AddEmployeeResponse::~AddEmployeeResponse() {
+  // @@protoc_insertion_point(destructor:api.AddEmployeeResponse)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void AddEmployeeResponse::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void AddEmployeeResponse::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void AddEmployeeResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:api.AddEmployeeResponse)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.res_ = 0;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* AddEmployeeResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // int32 res = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.res_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* AddEmployeeResponse::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:api.AddEmployeeResponse)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 res = 1;
+  if (this->_internal_res() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_res(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:api.AddEmployeeResponse)
+  return target;
+}
+
+size_t AddEmployeeResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:api.AddEmployeeResponse)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // int32 res = 1;
+  if (this->_internal_res() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_res());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData AddEmployeeResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    AddEmployeeResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*AddEmployeeResponse::GetClassData() const { return &_class_data_; }
+
+
+void AddEmployeeResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<AddEmployeeResponse*>(&to_msg);
+  auto& from = static_cast<const AddEmployeeResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:api.AddEmployeeResponse)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_res() != 0) {
+    _this->_internal_set_res(from._internal_res());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void AddEmployeeResponse::CopyFrom(const AddEmployeeResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:api.AddEmployeeResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool AddEmployeeResponse::IsInitialized() const {
+  return true;
+}
+
+void AddEmployeeResponse::InternalSwap(AddEmployeeResponse* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.res_, other->_impl_.res_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata AddEmployeeResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_api_2eproto_getter, &descriptor_table_api_2eproto_once,
+      file_level_metadata_api_2eproto[5]);
+}
+
+// ===================================================================
+
+class DeleteEmployeeRequest::_Internal {
+ public:
+};
+
+DeleteEmployeeRequest::DeleteEmployeeRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:api.DeleteEmployeeRequest)
+}
+DeleteEmployeeRequest::DeleteEmployeeRequest(const DeleteEmployeeRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  DeleteEmployeeRequest* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.id_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.id_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.id_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_id().empty()) {
+    _this->_impl_.id_.Set(from._internal_id(), 
+      _this->GetArenaForAllocation());
+  }
+  // @@protoc_insertion_point(copy_constructor:api.DeleteEmployeeRequest)
+}
+
+inline void DeleteEmployeeRequest::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.id_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.id_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.id_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+}
+
+DeleteEmployeeRequest::~DeleteEmployeeRequest() {
+  // @@protoc_insertion_point(destructor:api.DeleteEmployeeRequest)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void DeleteEmployeeRequest::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.id_.Destroy();
+}
+
+void DeleteEmployeeRequest::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void DeleteEmployeeRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:api.DeleteEmployeeRequest)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.id_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* DeleteEmployeeRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // string id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          auto str = _internal_mutable_id();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "api.DeleteEmployeeRequest.id"));
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* DeleteEmployeeRequest::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:api.DeleteEmployeeRequest)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string id = 1;
+  if (!this->_internal_id().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_id().data(), static_cast<int>(this->_internal_id().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "api.DeleteEmployeeRequest.id");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_id(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:api.DeleteEmployeeRequest)
+  return target;
+}
+
+size_t DeleteEmployeeRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:api.DeleteEmployeeRequest)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string id = 1;
+  if (!this->_internal_id().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_id());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData DeleteEmployeeRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    DeleteEmployeeRequest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*DeleteEmployeeRequest::GetClassData() const { return &_class_data_; }
+
+
+void DeleteEmployeeRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<DeleteEmployeeRequest*>(&to_msg);
+  auto& from = static_cast<const DeleteEmployeeRequest&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:api.DeleteEmployeeRequest)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_id().empty()) {
+    _this->_internal_set_id(from._internal_id());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void DeleteEmployeeRequest::CopyFrom(const DeleteEmployeeRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:api.DeleteEmployeeRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool DeleteEmployeeRequest::IsInitialized() const {
+  return true;
+}
+
+void DeleteEmployeeRequest::InternalSwap(DeleteEmployeeRequest* other) {
+  using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.id_, lhs_arena,
+      &other->_impl_.id_, rhs_arena
+  );
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata DeleteEmployeeRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_api_2eproto_getter, &descriptor_table_api_2eproto_once,
+      file_level_metadata_api_2eproto[6]);
+}
+
+// ===================================================================
+
+class DeleteEmployeeResponse::_Internal {
+ public:
+};
+
+DeleteEmployeeResponse::DeleteEmployeeResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:api.DeleteEmployeeResponse)
+}
+DeleteEmployeeResponse::DeleteEmployeeResponse(const DeleteEmployeeResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  DeleteEmployeeResponse* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.res_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_impl_.res_ = from._impl_.res_;
+  // @@protoc_insertion_point(copy_constructor:api.DeleteEmployeeResponse)
+}
+
+inline void DeleteEmployeeResponse::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.res_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+DeleteEmployeeResponse::~DeleteEmployeeResponse() {
+  // @@protoc_insertion_point(destructor:api.DeleteEmployeeResponse)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void DeleteEmployeeResponse::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void DeleteEmployeeResponse::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void DeleteEmployeeResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:api.DeleteEmployeeResponse)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.res_ = 0;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* DeleteEmployeeResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // int32 res = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.res_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* DeleteEmployeeResponse::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:api.DeleteEmployeeResponse)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 res = 1;
+  if (this->_internal_res() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_res(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:api.DeleteEmployeeResponse)
+  return target;
+}
+
+size_t DeleteEmployeeResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:api.DeleteEmployeeResponse)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // int32 res = 1;
+  if (this->_internal_res() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_res());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData DeleteEmployeeResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    DeleteEmployeeResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*DeleteEmployeeResponse::GetClassData() const { return &_class_data_; }
+
+
+void DeleteEmployeeResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<DeleteEmployeeResponse*>(&to_msg);
+  auto& from = static_cast<const DeleteEmployeeResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:api.DeleteEmployeeResponse)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_res() != 0) {
+    _this->_internal_set_res(from._internal_res());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void DeleteEmployeeResponse::CopyFrom(const DeleteEmployeeResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:api.DeleteEmployeeResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool DeleteEmployeeResponse::IsInitialized() const {
+  return true;
+}
+
+void DeleteEmployeeResponse::InternalSwap(DeleteEmployeeResponse* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.res_, other->_impl_.res_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata DeleteEmployeeResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_api_2eproto_getter, &descriptor_table_api_2eproto_once,
+      file_level_metadata_api_2eproto[7]);
+}
+
+// ===================================================================
+
+class UpdateEmployeeRequest::_Internal {
+ public:
+  static const ::api::Employee& empolyee(const UpdateEmployeeRequest* msg);
+};
+
+const ::api::Employee&
+UpdateEmployeeRequest::_Internal::empolyee(const UpdateEmployeeRequest* msg) {
+  return *msg->_impl_.empolyee_;
+}
+UpdateEmployeeRequest::UpdateEmployeeRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:api.UpdateEmployeeRequest)
+}
+UpdateEmployeeRequest::UpdateEmployeeRequest(const UpdateEmployeeRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  UpdateEmployeeRequest* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.empolyee_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_empolyee()) {
+    _this->_impl_.empolyee_ = new ::api::Employee(*from._impl_.empolyee_);
+  }
+  // @@protoc_insertion_point(copy_constructor:api.UpdateEmployeeRequest)
+}
+
+inline void UpdateEmployeeRequest::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.empolyee_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+UpdateEmployeeRequest::~UpdateEmployeeRequest() {
+  // @@protoc_insertion_point(destructor:api.UpdateEmployeeRequest)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void UpdateEmployeeRequest::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.empolyee_;
+}
+
+void UpdateEmployeeRequest::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void UpdateEmployeeRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:api.UpdateEmployeeRequest)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.empolyee_ != nullptr) {
+    delete _impl_.empolyee_;
+  }
+  _impl_.empolyee_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* UpdateEmployeeRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .api.Employee empolyee = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_empolyee(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* UpdateEmployeeRequest::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:api.UpdateEmployeeRequest)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .api.Employee empolyee = 1;
+  if (this->_internal_has_empolyee()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::empolyee(this),
+        _Internal::empolyee(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:api.UpdateEmployeeRequest)
+  return target;
+}
+
+size_t UpdateEmployeeRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:api.UpdateEmployeeRequest)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .api.Employee empolyee = 1;
+  if (this->_internal_has_empolyee()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.empolyee_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData UpdateEmployeeRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    UpdateEmployeeRequest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*UpdateEmployeeRequest::GetClassData() const { return &_class_data_; }
+
+
+void UpdateEmployeeRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<UpdateEmployeeRequest*>(&to_msg);
+  auto& from = static_cast<const UpdateEmployeeRequest&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:api.UpdateEmployeeRequest)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_empolyee()) {
+    _this->_internal_mutable_empolyee()->::api::Employee::MergeFrom(
+        from._internal_empolyee());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void UpdateEmployeeRequest::CopyFrom(const UpdateEmployeeRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:api.UpdateEmployeeRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool UpdateEmployeeRequest::IsInitialized() const {
+  return true;
+}
+
+void UpdateEmployeeRequest::InternalSwap(UpdateEmployeeRequest* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.empolyee_, other->_impl_.empolyee_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata UpdateEmployeeRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_api_2eproto_getter, &descriptor_table_api_2eproto_once,
+      file_level_metadata_api_2eproto[8]);
+}
+
+// ===================================================================
+
+class UpdateEmployeeResponse::_Internal {
+ public:
+};
+
+UpdateEmployeeResponse::UpdateEmployeeResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:api.UpdateEmployeeResponse)
+}
+UpdateEmployeeResponse::UpdateEmployeeResponse(const UpdateEmployeeResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  UpdateEmployeeResponse* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.res_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_impl_.res_ = from._impl_.res_;
+  // @@protoc_insertion_point(copy_constructor:api.UpdateEmployeeResponse)
+}
+
+inline void UpdateEmployeeResponse::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.res_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+UpdateEmployeeResponse::~UpdateEmployeeResponse() {
+  // @@protoc_insertion_point(destructor:api.UpdateEmployeeResponse)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void UpdateEmployeeResponse::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void UpdateEmployeeResponse::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void UpdateEmployeeResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:api.UpdateEmployeeResponse)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.res_ = 0;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* UpdateEmployeeResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // int32 res = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.res_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* UpdateEmployeeResponse::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:api.UpdateEmployeeResponse)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 res = 1;
+  if (this->_internal_res() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_res(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:api.UpdateEmployeeResponse)
+  return target;
+}
+
+size_t UpdateEmployeeResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:api.UpdateEmployeeResponse)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // int32 res = 1;
+  if (this->_internal_res() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_res());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData UpdateEmployeeResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    UpdateEmployeeResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*UpdateEmployeeResponse::GetClassData() const { return &_class_data_; }
+
+
+void UpdateEmployeeResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<UpdateEmployeeResponse*>(&to_msg);
+  auto& from = static_cast<const UpdateEmployeeResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:api.UpdateEmployeeResponse)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_res() != 0) {
+    _this->_internal_set_res(from._internal_res());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void UpdateEmployeeResponse::CopyFrom(const UpdateEmployeeResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:api.UpdateEmployeeResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool UpdateEmployeeResponse::IsInitialized() const {
+  return true;
+}
+
+void UpdateEmployeeResponse::InternalSwap(UpdateEmployeeResponse* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.res_, other->_impl_.res_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata UpdateEmployeeResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_api_2eproto_getter, &descriptor_table_api_2eproto_once,
+      file_level_metadata_api_2eproto[9]);
+}
+
+// ===================================================================
+
+class GetEmployeeRequest::_Internal {
+ public:
+};
+
+GetEmployeeRequest::GetEmployeeRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:api.GetEmployeeRequest)
+}
+GetEmployeeRequest::GetEmployeeRequest(const GetEmployeeRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  GetEmployeeRequest* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.id_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.id_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.id_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_id().empty()) {
+    _this->_impl_.id_.Set(from._internal_id(), 
+      _this->GetArenaForAllocation());
+  }
+  // @@protoc_insertion_point(copy_constructor:api.GetEmployeeRequest)
+}
+
+inline void GetEmployeeRequest::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.id_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.id_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.id_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+}
+
+GetEmployeeRequest::~GetEmployeeRequest() {
+  // @@protoc_insertion_point(destructor:api.GetEmployeeRequest)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void GetEmployeeRequest::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.id_.Destroy();
+}
+
+void GetEmployeeRequest::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void GetEmployeeRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:api.GetEmployeeRequest)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.id_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* GetEmployeeRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // string id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          auto str = _internal_mutable_id();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "api.GetEmployeeRequest.id"));
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* GetEmployeeRequest::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:api.GetEmployeeRequest)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string id = 1;
+  if (!this->_internal_id().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_id().data(), static_cast<int>(this->_internal_id().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "api.GetEmployeeRequest.id");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_id(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:api.GetEmployeeRequest)
+  return target;
+}
+
+size_t GetEmployeeRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:api.GetEmployeeRequest)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string id = 1;
+  if (!this->_internal_id().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_id());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetEmployeeRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    GetEmployeeRequest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetEmployeeRequest::GetClassData() const { return &_class_data_; }
+
+
+void GetEmployeeRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<GetEmployeeRequest*>(&to_msg);
+  auto& from = static_cast<const GetEmployeeRequest&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:api.GetEmployeeRequest)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_id().empty()) {
+    _this->_internal_set_id(from._internal_id());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void GetEmployeeRequest::CopyFrom(const GetEmployeeRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:api.GetEmployeeRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool GetEmployeeRequest::IsInitialized() const {
+  return true;
+}
+
+void GetEmployeeRequest::InternalSwap(GetEmployeeRequest* other) {
+  using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.id_, lhs_arena,
+      &other->_impl_.id_, rhs_arena
+  );
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata GetEmployeeRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_api_2eproto_getter, &descriptor_table_api_2eproto_once,
+      file_level_metadata_api_2eproto[10]);
+}
+
+// ===================================================================
+
+class GetEmployeeResponse::_Internal {
+ public:
+  static const ::api::Employee& empolyee(const GetEmployeeResponse* msg);
+};
+
+const ::api::Employee&
+GetEmployeeResponse::_Internal::empolyee(const GetEmployeeResponse* msg) {
+  return *msg->_impl_.empolyee_;
+}
+GetEmployeeResponse::GetEmployeeResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:api.GetEmployeeResponse)
+}
+GetEmployeeResponse::GetEmployeeResponse(const GetEmployeeResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  GetEmployeeResponse* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.empolyee_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_empolyee()) {
+    _this->_impl_.empolyee_ = new ::api::Employee(*from._impl_.empolyee_);
+  }
+  // @@protoc_insertion_point(copy_constructor:api.GetEmployeeResponse)
+}
+
+inline void GetEmployeeResponse::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.empolyee_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+GetEmployeeResponse::~GetEmployeeResponse() {
+  // @@protoc_insertion_point(destructor:api.GetEmployeeResponse)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void GetEmployeeResponse::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.empolyee_;
+}
+
+void GetEmployeeResponse::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void GetEmployeeResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:api.GetEmployeeResponse)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.empolyee_ != nullptr) {
+    delete _impl_.empolyee_;
+  }
+  _impl_.empolyee_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* GetEmployeeResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .api.Employee empolyee = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_empolyee(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* GetEmployeeResponse::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:api.GetEmployeeResponse)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .api.Employee empolyee = 1;
+  if (this->_internal_has_empolyee()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::empolyee(this),
+        _Internal::empolyee(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:api.GetEmployeeResponse)
+  return target;
+}
+
+size_t GetEmployeeResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:api.GetEmployeeResponse)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .api.Employee empolyee = 1;
+  if (this->_internal_has_empolyee()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.empolyee_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetEmployeeResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    GetEmployeeResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetEmployeeResponse::GetClassData() const { return &_class_data_; }
+
+
+void GetEmployeeResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<GetEmployeeResponse*>(&to_msg);
+  auto& from = static_cast<const GetEmployeeResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:api.GetEmployeeResponse)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_empolyee()) {
+    _this->_internal_mutable_empolyee()->::api::Employee::MergeFrom(
+        from._internal_empolyee());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void GetEmployeeResponse::CopyFrom(const GetEmployeeResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:api.GetEmployeeResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool GetEmployeeResponse::IsInitialized() const {
+  return true;
+}
+
+void GetEmployeeResponse::InternalSwap(GetEmployeeResponse* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.empolyee_, other->_impl_.empolyee_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata GetEmployeeResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_api_2eproto_getter, &descriptor_table_api_2eproto_once,
+      file_level_metadata_api_2eproto[11]);
+}
+
+// ===================================================================
+
+class GetEmployeeByKeywordRequest::_Internal {
+ public:
+};
+
+GetEmployeeByKeywordRequest::GetEmployeeByKeywordRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:api.GetEmployeeByKeywordRequest)
+}
+GetEmployeeByKeywordRequest::GetEmployeeByKeywordRequest(const GetEmployeeByKeywordRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  GetEmployeeByKeywordRequest* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.keyword_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.keyword_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.keyword_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_keyword().empty()) {
+    _this->_impl_.keyword_.Set(from._internal_keyword(), 
+      _this->GetArenaForAllocation());
+  }
+  // @@protoc_insertion_point(copy_constructor:api.GetEmployeeByKeywordRequest)
+}
+
+inline void GetEmployeeByKeywordRequest::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.keyword_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.keyword_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.keyword_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+}
+
+GetEmployeeByKeywordRequest::~GetEmployeeByKeywordRequest() {
+  // @@protoc_insertion_point(destructor:api.GetEmployeeByKeywordRequest)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void GetEmployeeByKeywordRequest::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.keyword_.Destroy();
+}
+
+void GetEmployeeByKeywordRequest::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void GetEmployeeByKeywordRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:api.GetEmployeeByKeywordRequest)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.keyword_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* GetEmployeeByKeywordRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // string keyword = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          auto str = _internal_mutable_keyword();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "api.GetEmployeeByKeywordRequest.keyword"));
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* GetEmployeeByKeywordRequest::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:api.GetEmployeeByKeywordRequest)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string keyword = 1;
+  if (!this->_internal_keyword().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_keyword().data(), static_cast<int>(this->_internal_keyword().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "api.GetEmployeeByKeywordRequest.keyword");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_keyword(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:api.GetEmployeeByKeywordRequest)
+  return target;
+}
+
+size_t GetEmployeeByKeywordRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:api.GetEmployeeByKeywordRequest)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string keyword = 1;
+  if (!this->_internal_keyword().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_keyword());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetEmployeeByKeywordRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    GetEmployeeByKeywordRequest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetEmployeeByKeywordRequest::GetClassData() const { return &_class_data_; }
+
+
+void GetEmployeeByKeywordRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<GetEmployeeByKeywordRequest*>(&to_msg);
+  auto& from = static_cast<const GetEmployeeByKeywordRequest&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:api.GetEmployeeByKeywordRequest)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_keyword().empty()) {
+    _this->_internal_set_keyword(from._internal_keyword());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void GetEmployeeByKeywordRequest::CopyFrom(const GetEmployeeByKeywordRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:api.GetEmployeeByKeywordRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool GetEmployeeByKeywordRequest::IsInitialized() const {
+  return true;
+}
+
+void GetEmployeeByKeywordRequest::InternalSwap(GetEmployeeByKeywordRequest* other) {
+  using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.keyword_, lhs_arena,
+      &other->_impl_.keyword_, rhs_arena
+  );
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata GetEmployeeByKeywordRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_api_2eproto_getter, &descriptor_table_api_2eproto_once,
+      file_level_metadata_api_2eproto[12]);
+}
+
+// ===================================================================
+
+class GetEmployeeByKeywordResponse::_Internal {
+ public:
+  static const ::api::EmployeeList& empolyeelist(const GetEmployeeByKeywordResponse* msg);
+};
+
+const ::api::EmployeeList&
+GetEmployeeByKeywordResponse::_Internal::empolyeelist(const GetEmployeeByKeywordResponse* msg) {
+  return *msg->_impl_.empolyeelist_;
+}
+GetEmployeeByKeywordResponse::GetEmployeeByKeywordResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:api.GetEmployeeByKeywordResponse)
+}
+GetEmployeeByKeywordResponse::GetEmployeeByKeywordResponse(const GetEmployeeByKeywordResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  GetEmployeeByKeywordResponse* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.empolyeelist_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_empolyeelist()) {
+    _this->_impl_.empolyeelist_ = new ::api::EmployeeList(*from._impl_.empolyeelist_);
+  }
+  // @@protoc_insertion_point(copy_constructor:api.GetEmployeeByKeywordResponse)
+}
+
+inline void GetEmployeeByKeywordResponse::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.empolyeelist_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+GetEmployeeByKeywordResponse::~GetEmployeeByKeywordResponse() {
+  // @@protoc_insertion_point(destructor:api.GetEmployeeByKeywordResponse)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void GetEmployeeByKeywordResponse::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.empolyeelist_;
+}
+
+void GetEmployeeByKeywordResponse::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void GetEmployeeByKeywordResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:api.GetEmployeeByKeywordResponse)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.empolyeelist_ != nullptr) {
+    delete _impl_.empolyeelist_;
+  }
+  _impl_.empolyeelist_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* GetEmployeeByKeywordResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .api.EmployeeList empolyeeList = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_empolyeelist(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* GetEmployeeByKeywordResponse::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:api.GetEmployeeByKeywordResponse)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .api.EmployeeList empolyeeList = 1;
+  if (this->_internal_has_empolyeelist()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::empolyeelist(this),
+        _Internal::empolyeelist(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:api.GetEmployeeByKeywordResponse)
+  return target;
+}
+
+size_t GetEmployeeByKeywordResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:api.GetEmployeeByKeywordResponse)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .api.EmployeeList empolyeeList = 1;
+  if (this->_internal_has_empolyeelist()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.empolyeelist_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetEmployeeByKeywordResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    GetEmployeeByKeywordResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetEmployeeByKeywordResponse::GetClassData() const { return &_class_data_; }
+
+
+void GetEmployeeByKeywordResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<GetEmployeeByKeywordResponse*>(&to_msg);
+  auto& from = static_cast<const GetEmployeeByKeywordResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:api.GetEmployeeByKeywordResponse)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_empolyeelist()) {
+    _this->_internal_mutable_empolyeelist()->::api::EmployeeList::MergeFrom(
+        from._internal_empolyeelist());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void GetEmployeeByKeywordResponse::CopyFrom(const GetEmployeeByKeywordResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:api.GetEmployeeByKeywordResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool GetEmployeeByKeywordResponse::IsInitialized() const {
+  return true;
+}
+
+void GetEmployeeByKeywordResponse::InternalSwap(GetEmployeeByKeywordResponse* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.empolyeelist_, other->_impl_.empolyeelist_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata GetEmployeeByKeywordResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_api_2eproto_getter, &descriptor_table_api_2eproto_once,
+      file_level_metadata_api_2eproto[13]);
+}
+
+// ===================================================================
+
+class StatisticByDepartmentRequest::_Internal {
+ public:
+};
+
+StatisticByDepartmentRequest::StatisticByDepartmentRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  // @@protoc_insertion_point(arena_constructor:api.StatisticByDepartmentRequest)
+}
+StatisticByDepartmentRequest::StatisticByDepartmentRequest(const StatisticByDepartmentRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  StatisticByDepartmentRequest* const _this = this; (void)_this;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:api.StatisticByDepartmentRequest)
+}
+
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData StatisticByDepartmentRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*StatisticByDepartmentRequest::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata StatisticByDepartmentRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_api_2eproto_getter, &descriptor_table_api_2eproto_once,
+      file_level_metadata_api_2eproto[14]);
+}
+
+// ===================================================================
+
+class StatisticByDepartmentResponse::_Internal {
+ public:
+};
+
+StatisticByDepartmentResponse::StatisticByDepartmentResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:api.StatisticByDepartmentResponse)
+}
+StatisticByDepartmentResponse::StatisticByDepartmentResponse(const StatisticByDepartmentResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  StatisticByDepartmentResponse* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.departmentstatistic_){from._impl_.departmentstatistic_}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:api.StatisticByDepartmentResponse)
+}
+
+inline void StatisticByDepartmentResponse::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.departmentstatistic_){arena}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+StatisticByDepartmentResponse::~StatisticByDepartmentResponse() {
+  // @@protoc_insertion_point(destructor:api.StatisticByDepartmentResponse)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void StatisticByDepartmentResponse::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.departmentstatistic_.~RepeatedPtrField();
+}
+
+void StatisticByDepartmentResponse::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void StatisticByDepartmentResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:api.StatisticByDepartmentResponse)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.departmentstatistic_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* StatisticByDepartmentResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // repeated .api.DepartmentStatistic departmentStatistic = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_departmentstatistic(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* StatisticByDepartmentResponse::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:api.StatisticByDepartmentResponse)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated .api.DepartmentStatistic departmentStatistic = 1;
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_departmentstatistic_size()); i < n; i++) {
+    const auto& repfield = this->_internal_departmentstatistic(i);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:api.StatisticByDepartmentResponse)
+  return target;
+}
+
+size_t StatisticByDepartmentResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:api.StatisticByDepartmentResponse)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated .api.DepartmentStatistic departmentStatistic = 1;
+  total_size += 1UL * this->_internal_departmentstatistic_size();
+  for (const auto& msg : this->_impl_.departmentstatistic_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData StatisticByDepartmentResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    StatisticByDepartmentResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*StatisticByDepartmentResponse::GetClassData() const { return &_class_data_; }
+
+
+void StatisticByDepartmentResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<StatisticByDepartmentResponse*>(&to_msg);
+  auto& from = static_cast<const StatisticByDepartmentResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:api.StatisticByDepartmentResponse)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_impl_.departmentstatistic_.MergeFrom(from._impl_.departmentstatistic_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void StatisticByDepartmentResponse::CopyFrom(const StatisticByDepartmentResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:api.StatisticByDepartmentResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool StatisticByDepartmentResponse::IsInitialized() const {
+  return true;
+}
+
+void StatisticByDepartmentResponse::InternalSwap(StatisticByDepartmentResponse* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.departmentstatistic_.InternalSwap(&other->_impl_.departmentstatistic_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata StatisticByDepartmentResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_api_2eproto_getter, &descriptor_table_api_2eproto_once,
+      file_level_metadata_api_2eproto[15]);
+}
+
+// ===================================================================
+
+class StatisticByEducationRequest::_Internal {
+ public:
+};
+
+StatisticByEducationRequest::StatisticByEducationRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  // @@protoc_insertion_point(arena_constructor:api.StatisticByEducationRequest)
+}
+StatisticByEducationRequest::StatisticByEducationRequest(const StatisticByEducationRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  StatisticByEducationRequest* const _this = this; (void)_this;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:api.StatisticByEducationRequest)
+}
+
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData StatisticByEducationRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*StatisticByEducationRequest::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata StatisticByEducationRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_api_2eproto_getter, &descriptor_table_api_2eproto_once,
+      file_level_metadata_api_2eproto[16]);
+}
+
+// ===================================================================
+
+class StatisticByEducationResponse::_Internal {
+ public:
+  static const ::api::EducationStatistic& educationstatistic(const StatisticByEducationResponse* msg);
+};
+
+const ::api::EducationStatistic&
+StatisticByEducationResponse::_Internal::educationstatistic(const StatisticByEducationResponse* msg) {
+  return *msg->_impl_.educationstatistic_;
+}
+StatisticByEducationResponse::StatisticByEducationResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:api.StatisticByEducationResponse)
+}
+StatisticByEducationResponse::StatisticByEducationResponse(const StatisticByEducationResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  StatisticByEducationResponse* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.educationstatistic_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_educationstatistic()) {
+    _this->_impl_.educationstatistic_ = new ::api::EducationStatistic(*from._impl_.educationstatistic_);
+  }
+  // @@protoc_insertion_point(copy_constructor:api.StatisticByEducationResponse)
+}
+
+inline void StatisticByEducationResponse::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.educationstatistic_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+StatisticByEducationResponse::~StatisticByEducationResponse() {
+  // @@protoc_insertion_point(destructor:api.StatisticByEducationResponse)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void StatisticByEducationResponse::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.educationstatistic_;
+}
+
+void StatisticByEducationResponse::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void StatisticByEducationResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:api.StatisticByEducationResponse)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.educationstatistic_ != nullptr) {
+    delete _impl_.educationstatistic_;
+  }
+  _impl_.educationstatistic_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* StatisticByEducationResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .api.EducationStatistic educationStatistic = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_educationstatistic(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* StatisticByEducationResponse::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:api.StatisticByEducationResponse)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .api.EducationStatistic educationStatistic = 1;
+  if (this->_internal_has_educationstatistic()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::educationstatistic(this),
+        _Internal::educationstatistic(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:api.StatisticByEducationResponse)
+  return target;
+}
+
+size_t StatisticByEducationResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:api.StatisticByEducationResponse)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .api.EducationStatistic educationStatistic = 1;
+  if (this->_internal_has_educationstatistic()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.educationstatistic_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData StatisticByEducationResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    StatisticByEducationResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*StatisticByEducationResponse::GetClassData() const { return &_class_data_; }
+
+
+void StatisticByEducationResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<StatisticByEducationResponse*>(&to_msg);
+  auto& from = static_cast<const StatisticByEducationResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:api.StatisticByEducationResponse)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_educationstatistic()) {
+    _this->_internal_mutable_educationstatistic()->::api::EducationStatistic::MergeFrom(
+        from._internal_educationstatistic());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void StatisticByEducationResponse::CopyFrom(const StatisticByEducationResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:api.StatisticByEducationResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool StatisticByEducationResponse::IsInitialized() const {
+  return true;
+}
+
+void StatisticByEducationResponse::InternalSwap(StatisticByEducationResponse* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.educationstatistic_, other->_impl_.educationstatistic_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata StatisticByEducationResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_api_2eproto_getter, &descriptor_table_api_2eproto_once,
+      file_level_metadata_api_2eproto[17]);
+}
 
 // ===================================================================
 
@@ -301,7 +4261,7 @@ void TestRequest::InternalSwap(TestRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata TestRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_api_2eproto_getter, &descriptor_table_api_2eproto_once,
-      file_level_metadata_api_2eproto[0]);
+      file_level_metadata_api_2eproto[18]);
 }
 
 // ===================================================================
@@ -504,12 +4464,84 @@ void TestResponse::InternalSwap(TestResponse* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata TestResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_api_2eproto_getter, &descriptor_table_api_2eproto_once,
-      file_level_metadata_api_2eproto[1]);
+      file_level_metadata_api_2eproto[19]);
 }
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace api
 PROTOBUF_NAMESPACE_OPEN
+template<> PROTOBUF_NOINLINE ::api::Employee*
+Arena::CreateMaybeMessage< ::api::Employee >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::api::Employee >(arena);
+}
+template<> PROTOBUF_NOINLINE ::api::DepartmentStatistic*
+Arena::CreateMaybeMessage< ::api::DepartmentStatistic >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::api::DepartmentStatistic >(arena);
+}
+template<> PROTOBUF_NOINLINE ::api::EducationStatistic*
+Arena::CreateMaybeMessage< ::api::EducationStatistic >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::api::EducationStatistic >(arena);
+}
+template<> PROTOBUF_NOINLINE ::api::EmployeeList*
+Arena::CreateMaybeMessage< ::api::EmployeeList >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::api::EmployeeList >(arena);
+}
+template<> PROTOBUF_NOINLINE ::api::AddEmployeeRequest*
+Arena::CreateMaybeMessage< ::api::AddEmployeeRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::api::AddEmployeeRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::api::AddEmployeeResponse*
+Arena::CreateMaybeMessage< ::api::AddEmployeeResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::api::AddEmployeeResponse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::api::DeleteEmployeeRequest*
+Arena::CreateMaybeMessage< ::api::DeleteEmployeeRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::api::DeleteEmployeeRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::api::DeleteEmployeeResponse*
+Arena::CreateMaybeMessage< ::api::DeleteEmployeeResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::api::DeleteEmployeeResponse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::api::UpdateEmployeeRequest*
+Arena::CreateMaybeMessage< ::api::UpdateEmployeeRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::api::UpdateEmployeeRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::api::UpdateEmployeeResponse*
+Arena::CreateMaybeMessage< ::api::UpdateEmployeeResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::api::UpdateEmployeeResponse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::api::GetEmployeeRequest*
+Arena::CreateMaybeMessage< ::api::GetEmployeeRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::api::GetEmployeeRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::api::GetEmployeeResponse*
+Arena::CreateMaybeMessage< ::api::GetEmployeeResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::api::GetEmployeeResponse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::api::GetEmployeeByKeywordRequest*
+Arena::CreateMaybeMessage< ::api::GetEmployeeByKeywordRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::api::GetEmployeeByKeywordRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::api::GetEmployeeByKeywordResponse*
+Arena::CreateMaybeMessage< ::api::GetEmployeeByKeywordResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::api::GetEmployeeByKeywordResponse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::api::StatisticByDepartmentRequest*
+Arena::CreateMaybeMessage< ::api::StatisticByDepartmentRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::api::StatisticByDepartmentRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::api::StatisticByDepartmentResponse*
+Arena::CreateMaybeMessage< ::api::StatisticByDepartmentResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::api::StatisticByDepartmentResponse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::api::StatisticByEducationRequest*
+Arena::CreateMaybeMessage< ::api::StatisticByEducationRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::api::StatisticByEducationRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::api::StatisticByEducationResponse*
+Arena::CreateMaybeMessage< ::api::StatisticByEducationResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::api::StatisticByEducationResponse >(arena);
+}
 template<> PROTOBUF_NOINLINE ::api::TestRequest*
 Arena::CreateMaybeMessage< ::api::TestRequest >(Arena* arena) {
   return Arena::CreateMessageInternal< ::api::TestRequest >(arena);

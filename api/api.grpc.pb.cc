@@ -22,6 +22,13 @@
 namespace api {
 
 static const char* EmployeeService_method_names[] = {
+  "/api.EmployeeService/AddEmployee",
+  "/api.EmployeeService/DeleteEmployee",
+  "/api.EmployeeService/UpdateEmployee",
+  "/api.EmployeeService/GetEmployee",
+  "/api.EmployeeService/GetEmployeeByKeyword",
+  "/api.EmployeeService/StatisticByDepartment",
+  "/api.EmployeeService/StatisticByEducation",
   "/api.EmployeeService/Test",
 };
 
@@ -32,8 +39,176 @@ std::unique_ptr< EmployeeService::Stub> EmployeeService::NewStub(const std::shar
 }
 
 EmployeeService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options)
-  : channel_(channel), rpcmethod_Test_(EmployeeService_method_names[0], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  : channel_(channel), rpcmethod_AddEmployee_(EmployeeService_method_names[0], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_DeleteEmployee_(EmployeeService_method_names[1], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_UpdateEmployee_(EmployeeService_method_names[2], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetEmployee_(EmployeeService_method_names[3], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetEmployeeByKeyword_(EmployeeService_method_names[4], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_StatisticByDepartment_(EmployeeService_method_names[5], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_StatisticByEducation_(EmployeeService_method_names[6], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Test_(EmployeeService_method_names[7], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
+
+::grpc::Status EmployeeService::Stub::AddEmployee(::grpc::ClientContext* context, const ::api::AddEmployeeRequest& request, ::api::AddEmployeeResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::api::AddEmployeeRequest, ::api::AddEmployeeResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_AddEmployee_, context, request, response);
+}
+
+void EmployeeService::Stub::async::AddEmployee(::grpc::ClientContext* context, const ::api::AddEmployeeRequest* request, ::api::AddEmployeeResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::api::AddEmployeeRequest, ::api::AddEmployeeResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_AddEmployee_, context, request, response, std::move(f));
+}
+
+void EmployeeService::Stub::async::AddEmployee(::grpc::ClientContext* context, const ::api::AddEmployeeRequest* request, ::api::AddEmployeeResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_AddEmployee_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::api::AddEmployeeResponse>* EmployeeService::Stub::PrepareAsyncAddEmployeeRaw(::grpc::ClientContext* context, const ::api::AddEmployeeRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::api::AddEmployeeResponse, ::api::AddEmployeeRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_AddEmployee_, context, request);
+}
+
+::grpc::ClientAsyncResponseReader< ::api::AddEmployeeResponse>* EmployeeService::Stub::AsyncAddEmployeeRaw(::grpc::ClientContext* context, const ::api::AddEmployeeRequest& request, ::grpc::CompletionQueue* cq) {
+  auto* result =
+    this->PrepareAsyncAddEmployeeRaw(context, request, cq);
+  result->StartCall();
+  return result;
+}
+
+::grpc::Status EmployeeService::Stub::DeleteEmployee(::grpc::ClientContext* context, const ::api::DeleteEmployeeRequest& request, ::api::DeleteEmployeeResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::api::DeleteEmployeeRequest, ::api::DeleteEmployeeResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_DeleteEmployee_, context, request, response);
+}
+
+void EmployeeService::Stub::async::DeleteEmployee(::grpc::ClientContext* context, const ::api::DeleteEmployeeRequest* request, ::api::DeleteEmployeeResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::api::DeleteEmployeeRequest, ::api::DeleteEmployeeResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_DeleteEmployee_, context, request, response, std::move(f));
+}
+
+void EmployeeService::Stub::async::DeleteEmployee(::grpc::ClientContext* context, const ::api::DeleteEmployeeRequest* request, ::api::DeleteEmployeeResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_DeleteEmployee_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::api::DeleteEmployeeResponse>* EmployeeService::Stub::PrepareAsyncDeleteEmployeeRaw(::grpc::ClientContext* context, const ::api::DeleteEmployeeRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::api::DeleteEmployeeResponse, ::api::DeleteEmployeeRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_DeleteEmployee_, context, request);
+}
+
+::grpc::ClientAsyncResponseReader< ::api::DeleteEmployeeResponse>* EmployeeService::Stub::AsyncDeleteEmployeeRaw(::grpc::ClientContext* context, const ::api::DeleteEmployeeRequest& request, ::grpc::CompletionQueue* cq) {
+  auto* result =
+    this->PrepareAsyncDeleteEmployeeRaw(context, request, cq);
+  result->StartCall();
+  return result;
+}
+
+::grpc::Status EmployeeService::Stub::UpdateEmployee(::grpc::ClientContext* context, const ::api::UpdateEmployeeRequest& request, ::api::UpdateEmployeeResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::api::UpdateEmployeeRequest, ::api::UpdateEmployeeResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_UpdateEmployee_, context, request, response);
+}
+
+void EmployeeService::Stub::async::UpdateEmployee(::grpc::ClientContext* context, const ::api::UpdateEmployeeRequest* request, ::api::UpdateEmployeeResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::api::UpdateEmployeeRequest, ::api::UpdateEmployeeResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_UpdateEmployee_, context, request, response, std::move(f));
+}
+
+void EmployeeService::Stub::async::UpdateEmployee(::grpc::ClientContext* context, const ::api::UpdateEmployeeRequest* request, ::api::UpdateEmployeeResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_UpdateEmployee_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::api::UpdateEmployeeResponse>* EmployeeService::Stub::PrepareAsyncUpdateEmployeeRaw(::grpc::ClientContext* context, const ::api::UpdateEmployeeRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::api::UpdateEmployeeResponse, ::api::UpdateEmployeeRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_UpdateEmployee_, context, request);
+}
+
+::grpc::ClientAsyncResponseReader< ::api::UpdateEmployeeResponse>* EmployeeService::Stub::AsyncUpdateEmployeeRaw(::grpc::ClientContext* context, const ::api::UpdateEmployeeRequest& request, ::grpc::CompletionQueue* cq) {
+  auto* result =
+    this->PrepareAsyncUpdateEmployeeRaw(context, request, cq);
+  result->StartCall();
+  return result;
+}
+
+::grpc::Status EmployeeService::Stub::GetEmployee(::grpc::ClientContext* context, const ::api::GetEmployeeRequest& request, ::api::GetEmployeeResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::api::GetEmployeeRequest, ::api::GetEmployeeResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetEmployee_, context, request, response);
+}
+
+void EmployeeService::Stub::async::GetEmployee(::grpc::ClientContext* context, const ::api::GetEmployeeRequest* request, ::api::GetEmployeeResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::api::GetEmployeeRequest, ::api::GetEmployeeResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetEmployee_, context, request, response, std::move(f));
+}
+
+void EmployeeService::Stub::async::GetEmployee(::grpc::ClientContext* context, const ::api::GetEmployeeRequest* request, ::api::GetEmployeeResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetEmployee_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::api::GetEmployeeResponse>* EmployeeService::Stub::PrepareAsyncGetEmployeeRaw(::grpc::ClientContext* context, const ::api::GetEmployeeRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::api::GetEmployeeResponse, ::api::GetEmployeeRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetEmployee_, context, request);
+}
+
+::grpc::ClientAsyncResponseReader< ::api::GetEmployeeResponse>* EmployeeService::Stub::AsyncGetEmployeeRaw(::grpc::ClientContext* context, const ::api::GetEmployeeRequest& request, ::grpc::CompletionQueue* cq) {
+  auto* result =
+    this->PrepareAsyncGetEmployeeRaw(context, request, cq);
+  result->StartCall();
+  return result;
+}
+
+::grpc::Status EmployeeService::Stub::GetEmployeeByKeyword(::grpc::ClientContext* context, const ::api::GetEmployeeByKeywordRequest& request, ::api::GetEmployeeByKeywordResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::api::GetEmployeeByKeywordRequest, ::api::GetEmployeeByKeywordResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetEmployeeByKeyword_, context, request, response);
+}
+
+void EmployeeService::Stub::async::GetEmployeeByKeyword(::grpc::ClientContext* context, const ::api::GetEmployeeByKeywordRequest* request, ::api::GetEmployeeByKeywordResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::api::GetEmployeeByKeywordRequest, ::api::GetEmployeeByKeywordResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetEmployeeByKeyword_, context, request, response, std::move(f));
+}
+
+void EmployeeService::Stub::async::GetEmployeeByKeyword(::grpc::ClientContext* context, const ::api::GetEmployeeByKeywordRequest* request, ::api::GetEmployeeByKeywordResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetEmployeeByKeyword_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::api::GetEmployeeByKeywordResponse>* EmployeeService::Stub::PrepareAsyncGetEmployeeByKeywordRaw(::grpc::ClientContext* context, const ::api::GetEmployeeByKeywordRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::api::GetEmployeeByKeywordResponse, ::api::GetEmployeeByKeywordRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetEmployeeByKeyword_, context, request);
+}
+
+::grpc::ClientAsyncResponseReader< ::api::GetEmployeeByKeywordResponse>* EmployeeService::Stub::AsyncGetEmployeeByKeywordRaw(::grpc::ClientContext* context, const ::api::GetEmployeeByKeywordRequest& request, ::grpc::CompletionQueue* cq) {
+  auto* result =
+    this->PrepareAsyncGetEmployeeByKeywordRaw(context, request, cq);
+  result->StartCall();
+  return result;
+}
+
+::grpc::Status EmployeeService::Stub::StatisticByDepartment(::grpc::ClientContext* context, const ::api::StatisticByDepartmentRequest& request, ::api::StatisticByDepartmentResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::api::StatisticByDepartmentRequest, ::api::StatisticByDepartmentResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_StatisticByDepartment_, context, request, response);
+}
+
+void EmployeeService::Stub::async::StatisticByDepartment(::grpc::ClientContext* context, const ::api::StatisticByDepartmentRequest* request, ::api::StatisticByDepartmentResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::api::StatisticByDepartmentRequest, ::api::StatisticByDepartmentResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_StatisticByDepartment_, context, request, response, std::move(f));
+}
+
+void EmployeeService::Stub::async::StatisticByDepartment(::grpc::ClientContext* context, const ::api::StatisticByDepartmentRequest* request, ::api::StatisticByDepartmentResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_StatisticByDepartment_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::api::StatisticByDepartmentResponse>* EmployeeService::Stub::PrepareAsyncStatisticByDepartmentRaw(::grpc::ClientContext* context, const ::api::StatisticByDepartmentRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::api::StatisticByDepartmentResponse, ::api::StatisticByDepartmentRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_StatisticByDepartment_, context, request);
+}
+
+::grpc::ClientAsyncResponseReader< ::api::StatisticByDepartmentResponse>* EmployeeService::Stub::AsyncStatisticByDepartmentRaw(::grpc::ClientContext* context, const ::api::StatisticByDepartmentRequest& request, ::grpc::CompletionQueue* cq) {
+  auto* result =
+    this->PrepareAsyncStatisticByDepartmentRaw(context, request, cq);
+  result->StartCall();
+  return result;
+}
+
+::grpc::Status EmployeeService::Stub::StatisticByEducation(::grpc::ClientContext* context, const ::api::StatisticByEducationRequest& request, ::api::StatisticByEducationResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::api::StatisticByEducationRequest, ::api::StatisticByEducationResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_StatisticByEducation_, context, request, response);
+}
+
+void EmployeeService::Stub::async::StatisticByEducation(::grpc::ClientContext* context, const ::api::StatisticByEducationRequest* request, ::api::StatisticByEducationResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::api::StatisticByEducationRequest, ::api::StatisticByEducationResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_StatisticByEducation_, context, request, response, std::move(f));
+}
+
+void EmployeeService::Stub::async::StatisticByEducation(::grpc::ClientContext* context, const ::api::StatisticByEducationRequest* request, ::api::StatisticByEducationResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_StatisticByEducation_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::api::StatisticByEducationResponse>* EmployeeService::Stub::PrepareAsyncStatisticByEducationRaw(::grpc::ClientContext* context, const ::api::StatisticByEducationRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::api::StatisticByEducationResponse, ::api::StatisticByEducationRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_StatisticByEducation_, context, request);
+}
+
+::grpc::ClientAsyncResponseReader< ::api::StatisticByEducationResponse>* EmployeeService::Stub::AsyncStatisticByEducationRaw(::grpc::ClientContext* context, const ::api::StatisticByEducationRequest& request, ::grpc::CompletionQueue* cq) {
+  auto* result =
+    this->PrepareAsyncStatisticByEducationRaw(context, request, cq);
+  result->StartCall();
+  return result;
+}
 
 ::grpc::Status EmployeeService::Stub::Test(::grpc::ClientContext* context, const ::api::TestRequest& request, ::api::TestResponse* response) {
   return ::grpc::internal::BlockingUnaryCall< ::api::TestRequest, ::api::TestResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_Test_, context, request, response);
@@ -62,6 +237,76 @@ EmployeeService::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       EmployeeService_method_names[0],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< EmployeeService::Service, ::api::AddEmployeeRequest, ::api::AddEmployeeResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](EmployeeService::Service* service,
+             ::grpc::ServerContext* ctx,
+             const ::api::AddEmployeeRequest* req,
+             ::api::AddEmployeeResponse* resp) {
+               return service->AddEmployee(ctx, req, resp);
+             }, this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      EmployeeService_method_names[1],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< EmployeeService::Service, ::api::DeleteEmployeeRequest, ::api::DeleteEmployeeResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](EmployeeService::Service* service,
+             ::grpc::ServerContext* ctx,
+             const ::api::DeleteEmployeeRequest* req,
+             ::api::DeleteEmployeeResponse* resp) {
+               return service->DeleteEmployee(ctx, req, resp);
+             }, this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      EmployeeService_method_names[2],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< EmployeeService::Service, ::api::UpdateEmployeeRequest, ::api::UpdateEmployeeResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](EmployeeService::Service* service,
+             ::grpc::ServerContext* ctx,
+             const ::api::UpdateEmployeeRequest* req,
+             ::api::UpdateEmployeeResponse* resp) {
+               return service->UpdateEmployee(ctx, req, resp);
+             }, this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      EmployeeService_method_names[3],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< EmployeeService::Service, ::api::GetEmployeeRequest, ::api::GetEmployeeResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](EmployeeService::Service* service,
+             ::grpc::ServerContext* ctx,
+             const ::api::GetEmployeeRequest* req,
+             ::api::GetEmployeeResponse* resp) {
+               return service->GetEmployee(ctx, req, resp);
+             }, this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      EmployeeService_method_names[4],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< EmployeeService::Service, ::api::GetEmployeeByKeywordRequest, ::api::GetEmployeeByKeywordResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](EmployeeService::Service* service,
+             ::grpc::ServerContext* ctx,
+             const ::api::GetEmployeeByKeywordRequest* req,
+             ::api::GetEmployeeByKeywordResponse* resp) {
+               return service->GetEmployeeByKeyword(ctx, req, resp);
+             }, this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      EmployeeService_method_names[5],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< EmployeeService::Service, ::api::StatisticByDepartmentRequest, ::api::StatisticByDepartmentResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](EmployeeService::Service* service,
+             ::grpc::ServerContext* ctx,
+             const ::api::StatisticByDepartmentRequest* req,
+             ::api::StatisticByDepartmentResponse* resp) {
+               return service->StatisticByDepartment(ctx, req, resp);
+             }, this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      EmployeeService_method_names[6],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< EmployeeService::Service, ::api::StatisticByEducationRequest, ::api::StatisticByEducationResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](EmployeeService::Service* service,
+             ::grpc::ServerContext* ctx,
+             const ::api::StatisticByEducationRequest* req,
+             ::api::StatisticByEducationResponse* resp) {
+               return service->StatisticByEducation(ctx, req, resp);
+             }, this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      EmployeeService_method_names[7],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< EmployeeService::Service, ::api::TestRequest, ::api::TestResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](EmployeeService::Service* service,
              ::grpc::ServerContext* ctx,
@@ -72,6 +317,55 @@ EmployeeService::Service::Service() {
 }
 
 EmployeeService::Service::~Service() {
+}
+
+::grpc::Status EmployeeService::Service::AddEmployee(::grpc::ServerContext* context, const ::api::AddEmployeeRequest* request, ::api::AddEmployeeResponse* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status EmployeeService::Service::DeleteEmployee(::grpc::ServerContext* context, const ::api::DeleteEmployeeRequest* request, ::api::DeleteEmployeeResponse* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status EmployeeService::Service::UpdateEmployee(::grpc::ServerContext* context, const ::api::UpdateEmployeeRequest* request, ::api::UpdateEmployeeResponse* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status EmployeeService::Service::GetEmployee(::grpc::ServerContext* context, const ::api::GetEmployeeRequest* request, ::api::GetEmployeeResponse* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status EmployeeService::Service::GetEmployeeByKeyword(::grpc::ServerContext* context, const ::api::GetEmployeeByKeywordRequest* request, ::api::GetEmployeeByKeywordResponse* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status EmployeeService::Service::StatisticByDepartment(::grpc::ServerContext* context, const ::api::StatisticByDepartmentRequest* request, ::api::StatisticByDepartmentResponse* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status EmployeeService::Service::StatisticByEducation(::grpc::ServerContext* context, const ::api::StatisticByEducationRequest* request, ::api::StatisticByEducationResponse* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
 ::grpc::Status EmployeeService::Service::Test(::grpc::ServerContext* context, const ::api::TestRequest* request, ::api::TestResponse* response) {

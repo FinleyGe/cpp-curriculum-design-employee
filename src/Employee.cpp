@@ -15,9 +15,14 @@ Employee::Employee(const string &s) {
   ss >> info.phone;
   ss >> info.college;
   ss >> info.department;
-  int education;
+  string education;
   ss >> education;
-  info.education = (Education)education;
+  if (education == "BACHELOR")
+    info.education = BACHELOR;
+  else if (education == "MASTER")
+    info.education = MASTER;
+  else
+    info.education = DOCTOR;
 }
 
 EmployeeInfo Employee::getInfo() const { return info; }
