@@ -3,11 +3,20 @@ import 'dart:developer';
 import 'package:employee/api/api.pbgrpc.dart';
 import 'package:grpc/grpc.dart';
 
-final stub = EmployeeServiceClient(ClientChannel(
+var stub = EmployeeServiceClient(ClientChannel(
   'localhost',
   port: 50051,
   options: const ChannelOptions(credentials: ChannelCredentials.insecure()),
 ));
+
+void initStub(String address) {
+  stub = EmployeeServiceClient(ClientChannel(
+    address,
+    port: 50051,
+    options: const ChannelOptions(credentials: ChannelCredentials.insecure()),
+  ));
+  print("stub init");
+}
 
 Future<int> addEmployee(Employee e) async {
   try {

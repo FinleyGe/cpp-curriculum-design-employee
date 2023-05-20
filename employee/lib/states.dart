@@ -4,6 +4,7 @@ import 'package:flutter/foundation.dart';
 class EmployeeState with ChangeNotifier, DiagnosticableTreeMixin {
   Employee _employee = Employee();
   String _keywords = "";
+  String _address = "localhost";
   List<String> _employeeIDs = [];
   Employee get employee => _employee;
   String get keywords => _keywords;
@@ -23,6 +24,13 @@ class EmployeeState with ChangeNotifier, DiagnosticableTreeMixin {
     _keywords = k;
     notifyListeners();
   }
+
+  set address(String a) {
+    _address = a;
+    notifyListeners();
+  }
+
+  String get address => _address;
 
   void updateEmployee(Employee e) {
     _employee = e;

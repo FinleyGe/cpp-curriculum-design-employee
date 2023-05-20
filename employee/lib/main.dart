@@ -43,6 +43,12 @@ class _MyHomePageState extends State<MyHomePage> {
   int _currentIndex = 0;
 
   @override
+  void initState() {
+    super.initState();
+    context.read<EmployeeState>().address = 'localhost';
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -56,6 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
+                // set port
                 ElevatedButton(
                   onPressed: () async {
                     var res = await test();
@@ -186,6 +193,16 @@ class _MyHomePageState extends State<MyHomePage> {
                     );
                   },
                   child: const Text('修改'),
+                ),
+                SizedBox(
+                  width: 200,
+                  child: TextFormField(
+                      decoration: const InputDecoration(labelText: '地址'),
+                      onChanged: (value) {
+                        context.read<EmployeeState>().address = value;
+                        initStub(context.read<EmployeeState>().address);
+                      },
+                      initialValue: context.read<EmployeeState>().address),
                 ),
               ],
             )),
